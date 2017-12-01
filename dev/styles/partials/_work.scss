@@ -1,0 +1,44 @@
+// WORK
+
+.workGallery {
+	width: 100%;
+	margin: 40px auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.workSingle {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: calc( 1170px / 3);
+	width: calc( 1170px / 3);
+	margin: 0 auto;
+}
+
+.anatomyThumb {
+	background-image: url("../../assets/anatomy300.jpg");
+}
+
+.bearThumb {
+	background-image: url("../../assets/bear300.jpg");
+}
+
+.definityThumb {
+	background-image: url("../../assets/definity300.jpg");
+}
+
+.ipsumThumb {
+	background-image: url("../../assets/ipsum300.jpg");
+}
+
+.tarotThumb {
+	background-image: url("../../assets/tarot300.jpg");
+}
+
+.whereThumb {
+	background-image: url("../../assets/whereshouldibuy300.jpg");
+}

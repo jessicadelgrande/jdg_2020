@@ -1,2 +1,45 @@
+@import "partials/setup";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/functions";
 
+@import "partials/header";
+@import "partials/about";
+@import "partials/work";
+@import "partials/footer";
+
+
+@font-face {
+	font-family: tiempos;
+	src: url("../../assets/fonts/TiemposHeadline-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: bauMed;
+	src: url("../../assets/fonts/Bau-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: bauBold;
+	src: url("../../assets/fonts/Bau-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: basisReg;
+	src: url("../../assets/fonts/basis.woff") format("woff");
+}
+
+@font-face {
+	font-family: basisBold;
+	src: url("../../assets/fonts/basis-grotesque-bold.woff") format("woff");
+}
+
+body {
+	color: $defaultText;
+}
+
+.innerWrapper {
+	width: 1210px;
+	margin: 0 auto;
+}
 

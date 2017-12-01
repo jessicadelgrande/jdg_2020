@@ -1,0 +1,83 @@
+// HEADER
+
+header {
+	width: 100vw;
+	position: relative;
+}
+
+.navContainer {
+	width: 100vw;
+	background-color: white;
+	position: fixed;
+	top: 0px;
+}
+
+.topNav {
+	width: 630px;
+	height: 120px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+	background-color: white;
+}
+
+.navBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 4px solid $dkGrey;
+}
+
+.navBox p {
+	text-align: center;
+	font-family: "basisBold", sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 16px;
+	color: #0e1111;
+}
+
+.nameContainer p {
+	padding: 0 1rem;
+	position: fixed;
+	top: 48vh;
+	text-align: center;
+	z-index: 10;
+	font-family: "basisBold", sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 2px;
+	line-height: 16px;
+	// font-weight: 800;
+	color: #0E1111;
+}
+
+.nameContainerLeft {
+
+	p {
+		transform: rotate(-90deg);
+		left: -60px;
+	}
+}
+
+.nameContainerRight {
+
+	p {
+		transform: rotate(90deg);
+		right: -140px;
+	}
+}
+
+.hero {
+	width: 1210px;
+	height: 700px;
+	margin: 120px auto 0 auto;
+}
+
+.heroOverlay {
+	width: 1210px;
+	height: 700px;
+	background-image: linear-gradient(90deg, $gradientDark, $gradientMid, $gradientLight);
+}
