@@ -13,13 +13,13 @@
 
 $dkGrey: #666666;
 
-$defaultText: #0e1111;
+$textDefault: #0e1111;
 
-$gradientDark: #e4a199;
-$gradientLight: #fbd2d7;
-$gradientMid: #ecb7bf;
+// $gradientDark: #e4a199;
+// $gradientLight: #fbd2d7;
+// $gradientMid: #ecb7bf;
 
 // RGBA
-// gradientDark: rgb(228,161,153)
-// gradientLight: rgb(251,210,215)
-// gradientMid: rgb(236,183,191)
+$gradientDark: rgba(228,161,153, 0.5);
+$gradientLight: rgba(251,210,215, 0.6);
+$gradientMid: rgba(236,183,191, 0.7);

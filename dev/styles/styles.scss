@@ -6,22 +6,16 @@
 @import "partials/header";
 @import "partials/about";
 @import "partials/work";
+@import "partials/contact";
 @import "partials/footer";
+
+@import "partials/animations";
+
 
 
 @font-face {
 	font-family: tiempos;
 	src: url("../../assets/fonts/TiemposHeadline-Bold.woff") format("woff");
-}
-
-@font-face {
-	font-family: bauMed;
-	src: url("../../assets/fonts/Bau-Medium.woff") format("woff");
-}
-
-@font-face {
-	font-family: bauBold;
-	src: url("../../assets/fonts/Bau-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -35,7 +29,7 @@
 }
 
 body {
-	color: $defaultText;
+	color: $textDefault;
 }
 
 .innerWrapper {

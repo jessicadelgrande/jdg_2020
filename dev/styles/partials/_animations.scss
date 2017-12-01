@@ -1,0 +1,30 @@
+// FADE IN
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation: fadeIn 6s forwards;
+}
+
+// SLIDE FROM RIGHT
+
+@keyframes slideFromRight {
+	0% {
+		transform: translate3d(100%, 0, 0);
+		visibility: visible; 
+	}
+	100% {
+		transform: translate3d(0, 0, 0); 
+	} 
+}
+
+.slideFromRight {
+	animation: slideFromRight 2s; 
+}

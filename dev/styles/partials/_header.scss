@@ -10,11 +10,13 @@ header {
 	background-color: white;
 	position: fixed;
 	top: 0px;
+	z-index: 50;
 }
 
+// topNav will slide down to reveal on scroll only
 .topNav {
 	width: 630px;
-	height: 120px;
+	height: 80px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -39,6 +41,7 @@ header {
 	color: #0e1111;
 }
 
+// nameContainer will reveal after scrolling past hero
 .nameContainer p {
 	padding: 0 1rem;
 	position: fixed;
@@ -50,8 +53,7 @@ header {
 	font-size: 12px;
 	letter-spacing: 2px;
 	line-height: 16px;
-	// font-weight: 800;
-	color: #0E1111;
+	color: $textDefault;
 }
 
 .nameContainerLeft {
@@ -73,11 +75,36 @@ header {
 .hero {
 	width: 1210px;
 	height: 700px;
-	margin: 120px auto 0 auto;
+	margin: 0 auto;
+	background-image: url("../../assets/rose_outside.jpg");
+	background-size: cover;
 }
 
 .heroOverlay {
 	width: 1210px;
 	height: 700px;
 	background-image: linear-gradient(90deg, $gradientDark, $gradientMid, $gradientLight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	// create an SVG for smoother animation
+	.head {
+		font-family: "tiempos", serif;
+		font-size: 64px;
+		letter-spacing: 1px;
+		color: white;
+		margin: -16px auto 0px auto;
+		transition-delay: all 5s ease-in forwards;
+	}
+
+	.subhead {
+		font-family: "basisBold", sans-serif;
+		font-size: 12px;
+		color: white;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		transition-delay: all 10s ease-in forwards;
+	}
 }
