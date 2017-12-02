@@ -6,6 +6,8 @@ header {
 }
 
 .navContainer {
+	// visibility: hidden;
+	display: none;
 	width: 100vw;
 	background-color: white;
 	position: fixed;
@@ -39,6 +41,10 @@ header {
 	letter-spacing: 2px;
 	line-height: 16px;
 	color: #0e1111;
+}
+
+.nameContainer {
+	display: none;
 }
 
 // nameContainer will reveal after scrolling past hero

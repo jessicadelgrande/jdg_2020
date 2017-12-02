@@ -1,5 +1,10 @@
 // FOOTER
 
+footer {
+	height: 300px;
+	width: 100%;
+}
+
 .contact {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);

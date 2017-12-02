@@ -137,6 +137,7 @@ header {
   position: relative; }
 
 .navContainer {
+  display: none;
   width: 100vw;
   background-color: white;
   position: fixed;
@@ -166,6 +167,9 @@ header {
   letter-spacing: 2px;
   line-height: 16px;
   color: #0e1111; }
+
+.nameContainer {
+  display: none; }
 
 .nameContainer p {
   padding: 0 1rem;
@@ -287,6 +291,10 @@ header {
 
 .whereThumb {
   background-image: url("../../assets/whereshouldibuy300.jpg"); }
+
+footer {
+  height: 300px;
+  width: 100%; }
 
 .contact {
   display: grid;
