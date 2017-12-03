@@ -3,6 +3,11 @@
 footer {
 	height: 300px;
 	width: 100%;
+	margin-bottom: 64px;
+}
+
+.contact.innerWrapper {
+	width: 70vw;
 }
 
 .contact {
@@ -10,43 +15,32 @@ footer {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.social__pairs {
+.socialPairs {
 	display: flex;
 	align-items: center;
 
 	&:hover {
 		color: $gradientDarkHeavy;
 	}
-
-	@include bp(mrg) {
-		padding: 0 70px;
-
-		@include bp(med) {
-			padding: 0 15px;
-		}
-	}
 }
 
-.social__pairs i {
-	font-size: 1.2rem;
-	margin: 10px 0;
-
-	@include bp(lrg) {
-		color: $gradientDarkHeavy;
-	}
+.socialPairs svg {
+	transform: scale(2);
+	margin-right: 8px;
+	margin-top: -4px;
 }
 
-.social__label {
-	font-size: 0.8rem;
-	margin-left: 20px;
+.socialLabel {
+	font-size: 18px;
+	line-height: 24px;
+	font-family: $sansReg;
+	margin: 0 0 16px 20px;
 	color: $textDefault;
 	padding: 5px 0;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid $textDefault;
 	transition: border-bottom 0.2s ease-in-out;
-
-	a {
-		color: white
-	}
+	color: $textDefault;
+	text-decoration: none;
 
 	&:hover {
 		border-bottom: 2px solid $gradientDarkHeavy;
@@ -54,14 +48,18 @@ footer {
 	}
 
 	&:focus {
-		outline: none;
+		border-bottom: 2px solid $gradientDarkHeavy;
+		transition: border-bottom 0.2s ease-in-out;
 	}
 }
 
 .copyright {
 	background-color: white;
 	color: $textDefault;
-	font-weight: 500;
+	font-family: $sansBold;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	text-align: center;
 	margin: 30px 0;
 }

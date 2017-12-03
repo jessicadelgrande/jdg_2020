@@ -393,44 +393,52 @@ header {
 
 footer {
   height: 300px;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 64px; }
+
+.contact.innerWrapper {
+  width: 70vw; }
 
 .contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
 
-.social__pairs {
+.socialPairs {
   display: flex;
   align-items: center; }
-  .social__pairs:hover {
+  .socialPairs:hover {
     color: rgba(228, 161, 153, 0.8); }
 
-.social__pairs i {
-  font-size: 1.2rem;
-  margin: 10px 0; }
-  @media (max-width: 750px) {
-    .social__pairs i {
-      color: rgba(228, 161, 153, 0.8); } }
+.socialPairs svg {
+  transform: scale(2);
+  margin-right: 8px;
+  margin-top: -4px; }
 
-.social__label {
-  font-size: 0.8rem;
-  margin-left: 20px;
+.socialLabel {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "basisReg", sans-serif;
+  margin: 0 0 16px 20px;
   color: #0e1111;
   padding: 5px 0;
-  border-bottom: 2px solid black;
-  transition: border-bottom 0.2s ease-in-out; }
-  .social__label a {
-    color: white; }
-  .social__label:hover {
+  border-bottom: 2px solid #0e1111;
+  transition: border-bottom 0.2s ease-in-out;
+  color: #0e1111;
+  text-decoration: none; }
+  .socialLabel:hover {
     border-bottom: 2px solid rgba(228, 161, 153, 0.8);
     transition: border-bottom 0.2s ease-in-out; }
-  .social__label:focus {
-    outline: none; }
+  .socialLabel:focus {
+    border-bottom: 2px solid rgba(228, 161, 153, 0.8);
+    transition: border-bottom 0.2s ease-in-out; }
 
 .copyright {
   background-color: white;
   color: #0e1111;
-  font-weight: 500;
+  font-family: "basisBold", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   text-align: center;
   margin: 30px 0; }
 
