@@ -1,4 +1,4 @@
-// FADE IN - HERO head & subhead
+// FADE IN - HERO HEAD & SUBHEAD
 
 @keyframes enterSlowly {
 	0% {
@@ -12,6 +12,8 @@
 .enterSlowly {
 	animation: enterSlowly 5s forwards;
 }
+
+
 
 // SLIDE FROM RIGHT - WORK
 
@@ -28,3 +30,9 @@
 .slideFromRight {
 	animation: slideFromRight 3s; 
 }
+
+
+
+// BUTTON FADE
+
+@keyframes button

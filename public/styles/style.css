@@ -196,15 +196,15 @@ header {
   right: -140px; }
 
 .hero {
-  width: 1210px;
-  height: 700px;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
   background-image: url("../../assets/rose_outside.jpg");
   background-size: cover; }
 
 .heroOverlay {
-  width: 1210px;
-  height: 700px;
+  width: 100vw;
+  height: 100vh;
   background-image: linear-gradient(90deg, rgba(228, 161, 153, 0.4), rgba(236, 183, 191, 0.3), rgba(251, 210, 215, 0.7));
   display: flex;
   justify-content: center;
@@ -246,7 +246,6 @@ header {
   color: #0e1111; }
 
 .workGallery {
-  width: 100%;
   margin: 60px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -265,11 +264,10 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc( 1170px / 3);
-  width: calc( 1170px / 3);
+  height: calc( 85vw / 3);
+  width: calc( 85vw / 3);
   margin: 0 auto;
-  position: relative;
-  animation: slideFromRight; }
+  position: relative; }
 
 .workSingleOverlay {
   position: absolute;
@@ -294,7 +292,8 @@ header {
 
 .workTitle {
   font-family: "tiempos", serif;
-  font-size: 36px; }
+  font-size: 36px;
+  text-align: center; }
 
 .workDesc {
   display: none;
@@ -306,12 +305,22 @@ header {
   font-family: "basisReg", sans-serif;
   font-family: "basisReg", sans-serif;
   font-size: 12px;
+  letter-spacing: 1px;
   color: white;
   text-transform: uppercase;
   text-align: center;
-  padding: 8px;
+  padding: 12px 18px;
   border: 2px solid white;
+  border-radius: 3px;
   margin: 4px; }
+  .workDesc a:visited {
+    color: white; }
+  .workDesc a:hover {
+    color: #666666;
+    background-color: white;
+    border: 2px solid white; }
+  .workDesc a:active {
+    background-color: rgba(228, 161, 153, 0.8); }
   .workDesc a:visited {
     color: white; }
   .workDesc a:hover {
@@ -390,6 +399,41 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
 
+.social__pairs {
+  display: flex;
+  align-items: center; }
+  .social__pairs:hover {
+    color: rgba(228, 161, 153, 0.8); }
+
+.social__pairs i {
+  font-size: 1.2rem;
+  margin: 10px 0; }
+  @media (max-width: 750px) {
+    .social__pairs i {
+      color: rgba(228, 161, 153, 0.8); } }
+
+.social__label {
+  font-size: 0.8rem;
+  margin-left: 20px;
+  color: #0e1111;
+  padding: 5px 0;
+  border-bottom: 2px solid black;
+  transition: border-bottom 0.2s ease-in-out; }
+  .social__label a {
+    color: white; }
+  .social__label:hover {
+    border-bottom: 2px solid rgba(228, 161, 153, 0.8);
+    transition: border-bottom 0.2s ease-in-out; }
+  .social__label:focus {
+    outline: none; }
+
+.copyright {
+  background-color: white;
+  color: #0e1111;
+  font-weight: 500;
+  text-align: center;
+  margin: 30px 0; }
+
 @keyframes enterSlowly {
   0% {
     opacity: 0; }
@@ -409,6 +453,7 @@ footer {
 .slideFromRight {
   animation: slideFromRight 3s; }
 
+@keyframes button;
 @font-face {
   font-family: tiempos;
   src: url("../../assets/fonts/TiemposHeadline-Bold.woff") format("woff"); }
@@ -425,5 +470,5 @@ body {
   color: #0e1111; }
 
 .innerWrapper {
-  width: 1210px;
+  width: 90vw;
   margin: 0 auto; }

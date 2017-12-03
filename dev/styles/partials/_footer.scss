@@ -9,3 +9,59 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
+
+.social__pairs {
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		color: $gradientDarkHeavy;
+	}
+
+	@include bp(mrg) {
+		padding: 0 70px;
+
+		@include bp(med) {
+			padding: 0 15px;
+		}
+	}
+}
+
+.social__pairs i {
+	font-size: 1.2rem;
+	margin: 10px 0;
+
+	@include bp(lrg) {
+		color: $gradientDarkHeavy;
+	}
+}
+
+.social__label {
+	font-size: 0.8rem;
+	margin-left: 20px;
+	color: $textDefault;
+	padding: 5px 0;
+	border-bottom: 2px solid black;
+	transition: border-bottom 0.2s ease-in-out;
+
+	a {
+		color: white
+	}
+
+	&:hover {
+		border-bottom: 2px solid $gradientDarkHeavy;
+		transition: border-bottom 0.2s ease-in-out;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.copyright {
+	background-color: white;
+	color: $textDefault;
+	font-weight: 500;
+	text-align: center;
+	margin: 30px 0;
+}

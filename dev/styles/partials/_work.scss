@@ -1,7 +1,7 @@
 // WORK
 
 .workGallery {
-	width: 100%;
+	// width: 85vw;
 	margin: 60px auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -15,18 +15,19 @@
 	opacity: 1;
 	-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 	transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-	// animation: slideFromRight;
 }
 
 .workSingle {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: calc( 1170px / 3);
-	width: calc( 1170px / 3);
+	height: calc( 85vw / 3);
+	width: calc( 85vw / 3);
 	margin: 0 auto;
 	position: relative;
-	animation: slideFromRight;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
 }
 
 .workSingleOverlay {
@@ -42,7 +43,6 @@
 	align-items: center;
 
 	&:hover {
-		// background-color: $gradientDarkHeavy;
 		background-color: $dkGreyOp;
 		cursor: pointer;
 	}
@@ -59,6 +59,7 @@
 .workTitle {
 	font-family: $serifReg;
 	font-size: 36px;
+	text-align: center;
 }
 
 .workDesc {
@@ -68,14 +69,17 @@
 
 .workDesc a {
 	@include workLinks;
-	font-family: $sansReg;
-	font-size: 12px;
-	color: white;
-	text-transform: uppercase;
-	text-align: center;
-	padding: 8px;
-	border: 2px solid white;
-	margin: 4px;
+	@include buttonMain;
+	// font-family: $sansReg;
+	// font-size: 12px;
+	// letter-spacing: 1px;
+	// color: white;
+	// text-transform: uppercase;
+	// text-align: center;
+	// padding: 12px 18px;
+	// border: 2px solid white;
+	// border-radius: 3px;
+	// margin: 4px;
 }
 
 .anatomyThumb {

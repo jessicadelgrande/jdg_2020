@@ -79,23 +79,23 @@ header {
 }
 
 .hero {
-	width: 1210px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 	margin: 0 auto;
 	background-image: url("../../assets/rose_outside.jpg");
 	background-size: cover;
 }
 
 .heroOverlay {
-	width: 1210px;
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 	background-image: linear-gradient(90deg, $gradientDark, $gradientMid, $gradientLight);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 
-	// create an SVG for smoother animation
+	// create an SVG for smoother animation?
 	.head {
 		font-family: $serifReg;
 		font-size: 64px;

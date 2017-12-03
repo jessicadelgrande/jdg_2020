@@ -18,6 +18,33 @@
 	}
 }
 
+@mixin buttonMain {
+	font-family: $sansReg;
+	font-size: 12px;
+	letter-spacing: 1px;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 12px 18px;
+	border: 2px solid white;
+	border-radius: 3px;
+	margin: 4px;
+
+	&:visited {
+		color: white;
+	}
+
+	&:hover{
+		color: $dkGrey;
+		background-color: white;
+		border: 2px solid white;
+	}
+
+	&:active {
+		background-color: $gradientDarkHeavy;
+	}
+}
+
 @mixin aspect-ratio($width, $height) {
 	position: relative;
 
