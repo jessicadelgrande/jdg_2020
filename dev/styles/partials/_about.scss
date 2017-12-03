@@ -21,3 +21,17 @@
 	line-height: 46px;
 	color: $textDefault;
 }
+
+.aboutColumns {
+	width: 80%;
+	margin: 0 auto;
+	column-count: 2;
+	vertical-align: text-top;
+	font-family: $sansReg;
+	font-size: 14px;
+	letter-spacing: 1px;
+
+	p {
+		margin: 0;
+	}
+}
