@@ -1,6 +1,6 @@
-// FADE IN
+// FADE IN - HERO head & subhead
 
-@keyframes fadeIn {
+@keyframes enterSlowly {
 	0% {
 		opacity: 0;
 	}
@@ -9,11 +9,11 @@
 	}
 }
 
-.fadeIn {
-	animation: fadeIn 6s forwards;
+.enterSlowly {
+	animation: enterSlowly 5s forwards;
 }
 
-// SLIDE FROM RIGHT
+// SLIDE FROM RIGHT - WORK
 
 @keyframes slideFromRight {
 	0% {
@@ -26,5 +26,5 @@
 }
 
 .slideFromRight {
-	animation: slideFromRight 2s; 
+	animation: slideFromRight 3s; 
 }

@@ -1,17 +1,12 @@
-// $primaryFont: 'Francois One', sans-serif;
-// $secondaryFont: 'Lato', sans-serif;
-
-// $colorDk: #0F4E84;
-// $colorMd: #D9F0F5;
-// $colorLt: #F0F9FE;
-
-// $sml: ( max: 570px );
-// $med: ( max: 680px );
-// $lrg: ( max: 750px );
+$serifReg: 'tiempos', serif;
+$sansReg: 'basisReg', sans-serif;
+$sansBold: 'basisBold', sans-serif;
 
 // COLOURS
 
 $dkGrey: #666666;
+
+$dkGreyOp: rgba(102,102,102, 0.6);
 
 $textDefault: #0e1111;
 
@@ -20,6 +15,12 @@ $textDefault: #0e1111;
 // $gradientMid: #ecb7bf;
 
 // RGBA
-$gradientDark: rgba(228,161,153, 0.5);
-$gradientLight: rgba(251,210,215, 0.6);
-$gradientMid: rgba(236,183,191, 0.7);
+$gradientDark: rgba(228,161,153, 0.4);
+$gradientLight: rgba(251,210,215, 0.7);
+$gradientMid: rgba(236,183,191, 0.3);
+
+$gradientDarkHeavy: rgba(228,161,153, 0.8);
+
+// $sml: ( max: 570px );
+// $med: ( max: 680px );
+// $lrg: ( max: 750px );

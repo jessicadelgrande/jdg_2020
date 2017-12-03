@@ -6,6 +6,7 @@
 @import "partials/header";
 @import "partials/about";
 @import "partials/work";
+@import "partials/skills";
 @import "partials/contact";
 @import "partials/footer";
 
@@ -20,7 +21,7 @@
 
 @font-face {
 	font-family: basisReg;
-	src: url("../../assets/fonts/basis.woff") format("woff");
+	src: url("../../assets/fonts/basis-grotesque-regular.woff") format("woff");
 }
 
 @font-face {

@@ -1,0 +1,51 @@
+// SKILLS
+
+.skills {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.devicons {
+	display: flex;
+	flex-direction: column;
+	color: $textDefault;
+	margin: 70px 0;
+	flex-wrap: nowrap;
+	@include bp(lrg) {
+		flex-direction: column;
+	}
+}
+
+.devicon__group--six {
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 30px 0;
+	@include bp(lrg) {
+		flex-direction: column;
+	}
+}
+
+.devicon__group--three {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.devicons i {
+	padding: 25px;
+	width: 20%;
+	font-size: 86px;
+	text-align: center;
+	@include bp(med) {
+		font-size: 64px;
+	}
+}
+
+.devicon__single {
+	margin: 5px;
+}
+
+.devicon__single p {
+	font-size: 12px;
+	text-align: center;
+}

@@ -2,7 +2,7 @@
 
 .workGallery {
 	width: 100%;
-	margin: 40px auto;
+	margin: 60px auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, 1fr);
@@ -15,6 +15,7 @@
 	opacity: 1;
 	-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 	transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+	// animation: slideFromRight;
 }
 
 .workSingle {
@@ -25,6 +26,7 @@
 	width: calc( 1170px / 3);
 	margin: 0 auto;
 	position: relative;
+	animation: slideFromRight;
 }
 
 .workSingleOverlay {
@@ -33,8 +35,47 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	// background-color: rgba(0,0,0, 0.4);
-	background-color: $gradientDark;
+	background-color: $gradientLight;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		// background-color: $gradientDarkHeavy;
+		background-color: $dkGreyOp;
+		cursor: pointer;
+	}
+}
+
+.workSingleOverlay:hover .workTitle {
+	display: none;
+}
+
+.workSingleOverlay:hover .workDesc {
+	display: flex;
+}
+
+.workTitle {
+	font-family: $serifReg;
+	font-size: 36px;
+}
+
+.workDesc {
+	display: none;
+	flex-direction: column;
+}
+
+.workDesc a {
+	@include workLinks;
+	font-family: $sansReg;
+	font-size: 12px;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 8px;
+	border: 2px solid white;
+	margin: 4px;
 }
 
 .anatomyThumb {

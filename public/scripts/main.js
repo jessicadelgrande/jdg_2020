@@ -32,31 +32,23 @@ $(document).ready(function () {
 		}
 	});
 
-	// SCROLL REVEAL
+	// SCROLL REVEAL -- ABOUT, WORK 
 	window.sr = ScrollReveal();
-	sr.reveal('.revealing', { duration: 2000 });
-	new WOW().init();
+	sr.reveal('.revealing', { duration: 1500 });
 });
 
 // display nav items on scroll
 $(window).scroll(function () {
-	if ($(window).scrollTop() > 680) {
-		$(".navContainer").css("display", "block");
-		$(".navContainer").fadeIn(400);
+	if ($(window).scrollTop() > 640) {
+		$(".navContainer").css("visibility", "visible");
+		$(".navContainer").fadeIn(800);
+		$(".nameContainer").css("visibility", "visible");
+		$(".nameContainer").fadeIn(1000);
 	} else {
-		// $(".topNav").fadeOut(400);
-		$(".navContainer").css("display", "none");
-	}
-});
-
-// display sidebars on scroll
-$(window).scroll(function () {
-	if ($(window).scrollTop() > 680) {
-		$(".nameContainer").css("display", "block");
-		$(".nameContainer").fadeIn(800);
-	} else {
-		$(".nameContainer").css("display", "none");
-		$(".nameContainer").fadeOut(800);
+		$(".navContainer").css("visibility", "visible");
+		$(".navContainer").fadeOut(400);
+		$(".nameContainer").css("visibility", "visible");
+		$(".nameContainer").fadeOut(400);
 	}
 });
 

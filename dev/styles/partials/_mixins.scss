@@ -1,3 +1,23 @@
+@mixin workLinks {
+	text-decoration: none;
+	color: white;
+	font-family: $sansReg;
+
+	&:visited {
+		color: white;
+	}
+
+	&:hover{
+		color: $dkGrey;
+		background-color: white;
+		border: 2px solid white;
+	}
+
+	&:active {
+		background-color: $gradientDarkHeavy;
+	}
+}
+
 @mixin aspect-ratio($width, $height) {
 	position: relative;
 

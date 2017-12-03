@@ -137,6 +137,7 @@ header {
   position: relative; }
 
 .navContainer {
+  visibility: hidden;
   display: none;
   width: 100vw;
   background-color: white;
@@ -146,7 +147,7 @@ header {
 
 .topNav {
   width: 630px;
-  height: 80px;
+  height: 50px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -169,7 +170,9 @@ header {
   color: #0e1111; }
 
 .nameContainer {
-  display: none; }
+  visibility: hidden;
+  display: none;
+  z-index: 50; }
 
 .nameContainer p {
   padding: 0 1rem;
@@ -202,7 +205,7 @@ header {
 .heroOverlay {
   width: 1210px;
   height: 700px;
-  background-image: linear-gradient(90deg, rgba(228, 161, 153, 0.5), rgba(236, 183, 191, 0.7), rgba(251, 210, 215, 0.6));
+  background-image: linear-gradient(90deg, rgba(228, 161, 153, 0.4), rgba(236, 183, 191, 0.3), rgba(251, 210, 215, 0.7));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,14 +239,15 @@ header {
   margin: 40px auto 0 auto;
   width: 66%;
   text-align: center;
-  font-family: tiempos, serif;
+  font-family: "tiempos", serif;
   text-decoration: underline;
   font-size: 30px;
-  line-height: 46px; }
+  line-height: 46px;
+  color: #0e1111; }
 
 .workGallery {
   width: 100%;
-  margin: 40px auto;
+  margin: 60px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -264,7 +268,8 @@ header {
   height: calc( 1170px / 3);
   width: calc( 1170px / 3);
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  animation: slideFromRight; }
 
 .workSingleOverlay {
   position: absolute;
@@ -272,7 +277,49 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(228, 161, 153, 0.5); }
+  background-color: rgba(251, 210, 215, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .workSingleOverlay:hover {
+    background-color: rgba(102, 102, 102, 0.6);
+    cursor: pointer; }
+
+.workSingleOverlay:hover .workTitle {
+  display: none; }
+
+.workSingleOverlay:hover .workDesc {
+  display: flex; }
+
+.workTitle {
+  font-family: "tiempos", serif;
+  font-size: 36px; }
+
+.workDesc {
+  display: none;
+  flex-direction: column; }
+
+.workDesc a {
+  text-decoration: none;
+  color: white;
+  font-family: "basisReg", sans-serif;
+  font-family: "basisReg", sans-serif;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px;
+  border: 2px solid white;
+  margin: 4px; }
+  .workDesc a:visited {
+    color: white; }
+  .workDesc a:hover {
+    color: #666666;
+    background-color: white;
+    border: 2px solid white; }
+  .workDesc a:active {
+    background-color: rgba(228, 161, 153, 0.8); }
 
 .anatomyThumb {
   background-image: url("../../assets/anatomy300.jpg"); }
@@ -292,6 +339,49 @@ header {
 .whereThumb {
   background-image: url("../../assets/whereshouldibuy300.jpg"); }
 
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.devicons {
+  display: flex;
+  flex-direction: column;
+  color: #0e1111;
+  margin: 70px 0;
+  flex-wrap: nowrap; }
+  @media (max-width: 750px) {
+    .devicons {
+      flex-direction: column; } }
+
+.devicon__group--six {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 30px 0; }
+  @media (max-width: 750px) {
+    .devicon__group--six {
+      flex-direction: column; } }
+
+.devicon__group--three {
+  display: flex;
+  flex-wrap: nowrap; }
+
+.devicons i {
+  padding: 25px;
+  width: 20%;
+  font-size: 86px;
+  text-align: center; }
+  @media (max-width: 680px) {
+    .devicons i {
+      font-size: 64px; } }
+
+.devicon__single {
+  margin: 5px; }
+
+.devicon__single p {
+  font-size: 12px;
+  text-align: center; }
+
 footer {
   height: 300px;
   width: 100%; }
@@ -300,14 +390,14 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
 
-@keyframes fadeIn {
+@keyframes enterSlowly {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
 
-.fadeIn {
-  animation: fadeIn 6s forwards; }
+.enterSlowly {
+  animation: enterSlowly 5s forwards; }
 
 @keyframes slideFromRight {
   0% {
@@ -317,7 +407,7 @@ footer {
     transform: translate3d(0, 0, 0); } }
 
 .slideFromRight {
-  animation: slideFromRight 2s; }
+  animation: slideFromRight 3s; }
 
 @font-face {
   font-family: tiempos;
@@ -325,7 +415,7 @@ footer {
 
 @font-face {
   font-family: basisReg;
-  src: url("../../assets/fonts/basis.woff") format("woff"); }
+  src: url("../../assets/fonts/basis-grotesque-regular.woff") format("woff"); }
 
 @font-face {
   font-family: basisBold;
