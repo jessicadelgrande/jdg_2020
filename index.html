@@ -47,7 +47,22 @@
 	<script src="public/scripts/fontawesome.js"></script>
 
 	<!-- INSTAFEED -->
-	<script src="public/scripts/instafeed.min.js"></script>
+<!-- 	<script src="public/scripts/instafeed.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+	<script type="text/javascript">
+	  var userFeed = new Instafeed({
+	    get: 'user',
+	    userId: '1571190663',
+	    clientId: 'aec0f07c02554ff69a0bffdf2de11e20',
+	    accessToken: '1571190663.1677ed0.d9311c14d222423ea4d7b8a19af1ac37',
+	    resolution: 'standard_resolution',
+	    template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',
+	    sortBy: 'most-recent',
+	    limit: 4,
+	    links: false
+	  });
+	  userFeed.run();
+	</script>
 
 </head>
 
@@ -316,6 +331,7 @@
 		</footer>
 		<!-- FOOTER ENDS -->
 
+		<!-- INSTAFEED -->
 		<div id="instafeed"></div>
 
 

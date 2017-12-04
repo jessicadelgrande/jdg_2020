@@ -1,17 +1,5 @@
 'use strict';
 
-var feed = new Instafeed({
-	get: 'user',
-	userId: 1571190663,
-	accessToken: 'aec0f07c02554ff69a0bffdf2de11e20',
-	target: 'instagram',
-	resolution: 'standard_resolution',
-	after: function after() {
-		var el = document.getElementById('instafeed');
-		if (el.classList) el.classList.add('show');else el.className += ' ' + 'show';
-	}
-});
-
 $(document).ready(function () {
 	//HAMBURGER MENU
 	$('#hamburgerIcon').click(function (e) {

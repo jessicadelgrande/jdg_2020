@@ -66,5 +66,8 @@ footer {
 
 [id="instafeed"] {
 	height: 300px;
-	width: 100vw;
+	width: 100%;
+	display: grid;
+	grid-columns: repeat(2, 1fr);
+	grid-rows: repeat(2, 1fr);
 }
