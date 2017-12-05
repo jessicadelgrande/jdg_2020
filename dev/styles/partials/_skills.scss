@@ -12,6 +12,8 @@
 	color: $textDefault;
 	margin: 70px 0;
 	flex-wrap: nowrap;
+	padding-bottom: 70px;
+	border-bottom: 2px solid $textDefault;
 	@include bp(lrg) {
 		flex-direction: column;
 	}

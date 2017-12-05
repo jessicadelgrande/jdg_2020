@@ -17,10 +17,6 @@ footer {
 }
 
 .contactLeft {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-	// align-items: flex-start;
 	margin-top: -90px;
 }
 
@@ -90,6 +86,7 @@ footer {
 .contactMiddle {
 	display: flex;
 	align-items: flex-end;
+	margin-left: 12px;
 }
 
 .socialContainerMiddle {
@@ -97,6 +94,12 @@ footer {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-end;
+}
+
+.contactRight {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .gram {

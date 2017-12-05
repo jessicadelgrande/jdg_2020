@@ -61,6 +61,14 @@
 .workDesc {
 	display: none;
 	flex-direction: column;
+
+	p {
+		text-transform: uppercase;
+		font-family: $sansBold;
+		letter-spacing: 1px;
+		font-size: 14px;
+		color: white;
+	}
 }
 
 .workDesc a {

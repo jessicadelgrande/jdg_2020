@@ -346,6 +346,12 @@ header {
 .workDesc {
   display: none;
   flex-direction: column; }
+  .workDesc p {
+    text-transform: uppercase;
+    font-family: "basisBold", sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: white; }
 
 .workDesc a {
   text-decoration: none;
@@ -407,7 +413,9 @@ header {
   flex-direction: column;
   color: #0e1111;
   margin: 70px 0;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  padding-bottom: 70px;
+  border-bottom: 2px solid #0e1111; }
   @media (max-width: 750px) {
     .devicons {
       flex-direction: column; } }
@@ -504,13 +512,19 @@ footer {
 
 .contactMiddle {
   display: flex;
-  align-items: flex-end; }
+  align-items: flex-end;
+  margin-left: 12px; }
 
 .socialContainerMiddle {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end; }
+
+.contactRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .gram {
   text-transform: uppercase;
