@@ -13,7 +13,20 @@
 	animation: enterSlowly 5s forwards;
 }
 
+// PULSING DOWN ARROW 
 
+@keyframes pulse {
+	0% {
+		transform: scale(1, 1);
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
 
 // SLIDE FROM RIGHT - WORK
 

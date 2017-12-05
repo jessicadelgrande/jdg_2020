@@ -66,12 +66,14 @@ $('a[href*="#"]:not([href="#"])').click(function () {
 	}
 });
 
-// var feed = new Instafeed({
-// 	get: 'user',
-// 	userId: '$instaID',
-// 	clientId: '$instaKey'
+// BLINKING ARROW
+// $(document).ready(function() {
+// 	var keepGoing = document.getElementById('keepGoing');
+// 	setInterval(function() {
+// 		keepGoing.style.display = (keepGoing.style.display == 'none' ? '' : 'none');
+// 	}, 600);
+
 // });
-// feed.run();
 
 
 App.init = function () {
