@@ -20,22 +20,24 @@ footer {
 	margin-top: -90px;
 }
 
-.footerHello {
+.footerHello a {
 	font-family: $sansBold;
 	font-size: 108px;
 	text-align: left;
-	margin-bottom: 18px;
-}
+	border-bottom: 4px solid white;
+	transition: border-bottom 0.2s ease-in-out;
+	color: $textDefault;
+	text-decoration: none;
 
-.footerHelloIcon {
-	// display: flex;
-	// justify-content: center;
-	// align-items: flex-start;
-}
+	&:hover {
+		border-bottom: 4px solid $gradientDarkHeavy;
+		transition: border-bottom 0.2s ease-in-out;
+	}
 
-.footerHelloIcon svg {
-	transform: scale(4);
-	margin: 24px 0 0 24px;
+	&:focus {
+		border-bottom: 4px solid $gradientDarkHeavy;
+		transition: border-bottom 0.2s ease-in-out;
+	}
 }
 
 .socialPairs {
