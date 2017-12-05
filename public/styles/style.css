@@ -454,6 +454,19 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 18px; }
 
+.contactLeft {
+  margin-top: -90px; }
+
+.footerHello {
+  font-family: "basisBold", sans-serif;
+  font-size: 108px;
+  text-align: left;
+  margin-bottom: 18px; }
+
+.footerHelloIcon svg {
+  transform: scale(4);
+  margin: 24px 0 0 24px; }
+
 .socialPairs {
   display: flex;
   align-items: flex-start; }
@@ -483,11 +496,21 @@ footer {
     border-bottom: 2px solid rgba(228, 161, 153, 0.8);
     transition: border-bottom 0.2s ease-in-out; }
 
-.contactMiddle {
+.contactLeft {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
+  align-items: flex-start;
+  justify-content: flex-end; }
+
+.contactMiddle {
+  display: flex;
+  align-items: flex-end; }
+
+.socialContainerMiddle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end; }
 
 .gram {
   text-transform: uppercase;

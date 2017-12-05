@@ -16,6 +16,32 @@ footer {
 	grid-column-gap: 18px;
 }
 
+.contactLeft {
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: flex-start;
+	margin-top: -90px;
+}
+
+.footerHello {
+	font-family: $sansBold;
+	font-size: 108px;
+	text-align: left;
+	margin-bottom: 18px;
+}
+
+.footerHelloIcon {
+	// display: flex;
+	// justify-content: center;
+	// align-items: flex-start;
+}
+
+.footerHelloIcon svg {
+	transform: scale(4);
+	margin: 24px 0 0 24px;
+}
+
 .socialPairs {
 	display: flex;
 	align-items: flex-start;
@@ -54,11 +80,23 @@ footer {
 	}
 }
 
-.contactMiddle {
+.contactLeft {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.contactMiddle {
+	display: flex;
+	align-items: flex-end;
+}
+
+.socialContainerMiddle {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
 }
 
 .gram {
