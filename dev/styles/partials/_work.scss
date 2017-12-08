@@ -28,6 +28,12 @@
 		grid-column-gap: 10px;
 		width: 75vw;
 	}
+
+	@include bp(xsml) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .workSingle {
@@ -42,6 +48,17 @@
 	@include bp(med) {
 		height: calc( 75vw / 2 );
 		width: calc( 75vw / 2 );
+	}
+
+	@include bp(sml) {
+		height: calc( 70vw / 2 );
+		width: calc( 70vw / 2 ); 
+	}
+
+	@include bp(xsml) {
+		height: 70vw;
+		width: 70vw;
+		margin-bottom: 20px;
 	}
 }
 
@@ -100,13 +117,17 @@
 	@include bp(med) {
 		display: flex;
 	}
+}
 
-	.workHoverSkills {
-		text-transform: uppercase;
-		font-family: $sansBold;
-		letter-spacing: 1px;
-		font-size: 14px;
-		color: white;
+.workHoverSkills {
+	text-transform: uppercase;
+	font-family: $sansBold;
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: white;
+
+	@include bp(sml) {
+		font-size: 10px;
 	}
 }
 
@@ -120,6 +141,11 @@
 
 	@include bp(med) {
 		display: block;
+	}
+
+	@include bp(sml) {
+		font-size: 20px;
+		margin-top: 0px;
 	}
 }
 

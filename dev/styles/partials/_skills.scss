@@ -13,7 +13,13 @@
 	margin: 70px 0;
 	flex-wrap: nowrap;
 	padding-bottom: 70px;
-	border-bottom: 4px solid $gradientDark;
+	border-bottom: 4px solid $gradientLight;
+
+	@include bp(sml) {
+		transform: scale(0.7);
+		margin-top: -60px;
+		padding-bottom: 180px;
+	}
 }
 
 .devicon__group--six {

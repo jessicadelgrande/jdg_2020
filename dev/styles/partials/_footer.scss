@@ -4,6 +4,10 @@ footer {
 	min-height: 300px;
 	width: 100%;
 	margin-bottom: 64px;
+
+	@include bp(sml) {
+		margin-top: -100px;
+	}
 }
 
 .contact.innerWrapper {
@@ -21,12 +25,12 @@ footer {
 
 	@include bp(lrg) {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 2;
 	}
 
 	@include bp(sml) {
-		grid-template-columns: 1;
-		grid-template-rows: 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 }
 
@@ -42,7 +46,7 @@ footer {
 	}
 
 	@include bp(sml) {
-		grid-column-start: 1; grid-column-end: 1;
+		text-align: center;
 	}
 }
 
@@ -64,6 +68,24 @@ footer {
 	}
 }
 
+.contactMiddle {
+	display: flex;
+	align-items: flex-end;
+	margin-left: 0 20px 0 32px;
+
+	@include bp(sml) {
+		margin: 48px auto;
+	}
+}
+
+.socialContainerMiddle {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	margin: 0 auto;
+}
+
 .socialPairs {
 	display: flex;
 	align-items: flex-start;
@@ -72,9 +94,19 @@ footer {
 	&:hover {
 		color: $gradientDarkHeavy;
 	}
+
+	@include bp(med) {
+		color: $gradientDarkHeavy;
+	}
+}
+
+.socialPairs:hover .socialLabel {
+	border-bottom: 2px solid $gradientDarkHeavy;
 }
 
 .socialPairs svg {
+	// the fa icons are svgs
+	// the element is visible in the compiled code
 	transform: scale(2);
 	margin-right: 8px;
 	margin-top: 10px;
@@ -102,24 +134,14 @@ footer {
 	}
 }
 
-.contactMiddle {
-	display: flex;
-	align-items: flex-end;
-	margin-left: 0 20px 0 32px;
-}
-
-.socialContainerMiddle {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-end;
-	margin: 0 auto;
-}
-
 .contactRight {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	@include bp(sml) {
+		margin: 24px auto;
+	} 
 }
 
 .gram {

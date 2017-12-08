@@ -70,6 +70,12 @@
 
 // MEDIA BREAKPOINTS
 @mixin bp($size) {
+	@if ($size == 'xsml') {
+		@media (max-width: 500px) { 
+			@content; 
+		}
+	}
+
 	@if ($size == 'sml') {
 		@media (max-width: 650px) { 
 			@content; 
