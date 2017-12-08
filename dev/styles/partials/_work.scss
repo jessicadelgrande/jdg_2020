@@ -1,5 +1,12 @@
 // WORK
 
+.work.innerWrapper {
+
+	@include bp(med) {
+		width: 75vw;
+	}
+}
+
 .workGallery {
 	margin: 60px auto;
 	display: grid;
@@ -14,16 +21,28 @@
 	opacity: 1;
 	-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 	transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+
+	@include bp(med) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 10px;
+		width: 75vw;
+	}
 }
 
 .workSingle {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: calc( 85vw / 3);
-	width: calc( 85vw / 3);
+	height: calc( 85vw / 3 );
+	width: calc( 85vw / 3 );
 	margin: 0 auto;
 	position: relative;
+
+	@include bp(med) {
+		height: calc( 75vw / 2 );
+		width: calc( 75vw / 2 );
+	}
 }
 
 .workSingleOverlay {
@@ -37,8 +56,18 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 8px;
+	transition: all 0.3s ease-in-out;
 
 	&:hover {
+		background-color: $dkGreyOp;
+		cursor: pointer;
+		-webkit-box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);
+		-moz-box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);
+		box-shadow: 0px 0px 15px 0px rgba(153,153,153,1);
+	}
+
+	@include bp(med) {
 		background-color: $dkGreyOp;
 		cursor: pointer;
 	}
@@ -56,18 +85,41 @@
 	font-family: $serifReg;
 	font-size: 36px;
 	text-align: center;
+	color: $textDefault;
+
+	@include bp(med) {
+		display: none;
+	}
 }
 
 .workDesc {
 	display: none;
 	flex-direction: column;
+	align-items: center;
 
-	p {
+	@include bp(med) {
+		display: flex;
+	}
+
+	.workHoverSkills {
 		text-transform: uppercase;
 		font-family: $sansBold;
 		letter-spacing: 1px;
 		font-size: 14px;
 		color: white;
+	}
+}
+
+.mobileWorkTitle {
+	display: none;
+	font-family: $serifReg;
+	color: white;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 0px;
+
+	@include bp(med) {
+		display: block;
 	}
 }
 
@@ -80,8 +132,8 @@
 	background-image: url("../../assets/anatomy300.jpg");
 }
 
-.bearThumb {
-	background-image: url("../../assets/bear300.jpg");
+.soundbyteThumb {
+	background-image: url("../../assets/soundbyte300.jpg");
 }
 
 .definityThumb {

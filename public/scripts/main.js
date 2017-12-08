@@ -66,16 +66,6 @@ $('a[href*="#"]:not([href="#"])').click(function () {
 	}
 });
 
-// BLINKING ARROW
-// $(document).ready(function() {
-// 	var keepGoing = document.getElementById('keepGoing');
-// 	setInterval(function() {
-// 		keepGoing.style.display = (keepGoing.style.display == 'none' ? '' : 'none');
-// 	}, 600);
-
-// });
-
-
 App.init = function () {
 	App.events();
 }; //end of init();

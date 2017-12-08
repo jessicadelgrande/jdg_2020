@@ -13,24 +13,27 @@
 	margin: 70px 0;
 	flex-wrap: nowrap;
 	padding-bottom: 70px;
-	border-bottom: 2px solid $textDefault;
-	@include bp(lrg) {
-		flex-direction: column;
-	}
+	border-bottom: 4px solid $gradientDark;
 }
 
 .devicon__group--six {
 	display: flex;
 	flex-wrap: nowrap;
 	margin: 30px 0;
+
 	@include bp(lrg) {
 		flex-direction: column;
+		margin: 0 auto;
 	}
 }
 
 .devicon__group--three {
 	display: flex;
 	flex-wrap: nowrap;
+
+	@include bp(lrg) {
+		margin: 18px auto;
+	}
 }
 
 .devicons i {
@@ -38,17 +41,31 @@
 	width: 20%;
 	font-size: 86px;
 	text-align: center;
+	opacity: 0.5;
+	transition: opacity 0.3s ease-in-out;
+
 	@include bp(med) {
-		font-size: 64px;
+		// font-size: 64px;
+	}
+
+	&:hover {
+		opacity: 1;
 	}
 }
 
 .devicon__single {
 	margin: 5px;
+	border-bottom: 4px solid white;
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.1);
+	}
 }
 
 .devicon__single p {
-	font-size: 12px;
+	font-size: 10px;
 	text-align: center;
-	display: none;
+	visibility: hidden;
 }
+

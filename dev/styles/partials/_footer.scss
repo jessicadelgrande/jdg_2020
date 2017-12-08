@@ -1,23 +1,49 @@
 // FOOTER
 
 footer {
-	height: 300px;
+	min-height: 300px;
 	width: 100%;
 	margin-bottom: 64px;
 }
 
 .contact.innerWrapper {
-	width: 70vw;
+	width: 80vw;
+
+	@include bp(xlrg) {
+		width: 80vw;
+	}
 }
 
 .contact {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 18px;
+
+	@include bp(lrg) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 2;
+	}
+
+	@include bp(sml) {
+		grid-template-columns: 1;
+		grid-template-rows: 3;
+	}
 }
 
 .contactLeft {
+	display: flex;
+	align-items: flex-end;
 	margin-top: -90px;
+
+	@include bp(lrg) {
+		grid-column-start: 1; grid-column-end: span 2;
+		margin: 0 auto 48px auto;
+		align-items: flex-start;
+	}
+
+	@include bp(sml) {
+		grid-column-start: 1; grid-column-end: 1;
+	}
 }
 
 .footerHello a {
@@ -25,24 +51,23 @@ footer {
 	font-size: 108px;
 	text-align: left;
 	border-bottom: 4px solid white;
-	transition: border-bottom 0.2s ease-in-out;
 	color: $textDefault;
 	text-decoration: none;
+	transition: all 0.2s ease-in-out;
 
 	&:hover {
 		border-bottom: 4px solid $gradientDarkHeavy;
-		transition: border-bottom 0.2s ease-in-out;
 	}
 
 	&:focus {
 		border-bottom: 4px solid $gradientDarkHeavy;
-		transition: border-bottom 0.2s ease-in-out;
 	}
 }
 
 .socialPairs {
 	display: flex;
 	align-items: flex-start;
+	transition: all 0.2s ease-in-out;
 
 	&:hover {
 		color: $gradientDarkHeavy;
@@ -58,37 +83,29 @@ footer {
 .socialLabel {
 	font-size: 14px;
 	line-height: 24px;
+	white-space: nowrap;
 	font-family: $sansReg;
 	margin: 0 0 16px 20px;
 	color: $textDefault;
 	padding: 5px 0;
 	border-bottom: 2px solid white;
-	transition: border-bottom 0.2s ease-in-out;
 	color: $textDefault;
 	text-decoration: none;
+	transition: all 0.2s ease-in-out;
 
 	&:hover {
 		border-bottom: 2px solid $gradientDarkHeavy;
-		transition: border-bottom 0.2s ease-in-out;
 	}
 
 	&:focus {
 		border-bottom: 2px solid $gradientDarkHeavy;
-		transition: border-bottom 0.2s ease-in-out;
 	}
-}
-
-.contactLeft {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-end;
 }
 
 .contactMiddle {
 	display: flex;
 	align-items: flex-end;
-	margin-left: 12px;
+	margin-left: 0 20px 0 32px;
 }
 
 .socialContainerMiddle {
@@ -96,6 +113,7 @@ footer {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-end;
+	margin: 0 auto;
 }
 
 .contactRight {

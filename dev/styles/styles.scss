@@ -7,7 +7,6 @@
 @import "partials/about";
 @import "partials/work";
 @import "partials/skills";
-@import "partials/contact";
 @import "partials/footer";
 
 @import "partials/animations";
@@ -36,5 +35,9 @@ body {
 .innerWrapper {
 	width: 90vw;
 	margin: 0 auto;
+
+	@include bp(med) {
+		width: 80vw;
+	}
 }
 
