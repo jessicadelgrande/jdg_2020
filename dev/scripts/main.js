@@ -16,14 +16,14 @@ $(document).ready(function () {
 	// close the menu after an item has been selected
 	$('.navBox a').click(function () {
 		if ($('.navBoxContainer').hasClass('show')) {
-			$('.burgerWrapper, .navBoxContainer').removeClass('opened show');
+			$('.burgerWrapper, .navBoxContainer, .burger').removeClass('opened show');
 		};
 	});
 
 	// close the menu when clicking anywhere else on the page
 	$('html').click(function () {
 		if ($('.navBoxContainer').hasClass('show')) {
-			$('.burgerWrapper, .navBoxContainer').removeClass('opened show');
+			$('.burgerWrapper, .navBoxContainer, .burger').removeClass('opened show');
 		};
 	});
 
