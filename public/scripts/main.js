@@ -1,35 +1,30 @@
 'use strict';
 
 $(document).ready(function () {
-	//HAMBURGER MENU
-	$('#hamburgerIcon').click(function (e) {
-		//hamburgerIcon animation
-		$(this).toggleClass('open');
+	// hamburger menu
+	$('.burgerWrapper').click(function (e) {
 
 		//toggle header nav links
 		e.stopPropagation();
-		$('.navLinks').toggleClass('show');
+		$('.navBoxContainer').toggleClass('show');
 	});
 
-	// close the menu when clicking anywhere else on the website
-	$('html').click(function () {
-		if ($('.navLinks').hasClass('show')) {
-			$('#hamburgerIcon, .navLinks').removeClass('open show');
+	$('.burger').click(function () {
+		$(this).toggleClass('opened');
+	});
+
+	// close the menu after an item has been selected
+	$('.navBox a').click(function () {
+		if ($('.navBoxContainer').hasClass('show')) {
+			$('.burgerWrapper, .navBoxContainer').removeClass('opened show');
 		};
 	});
 
-	//SMOOTH SCROLLS
-	$('a[href*="#"]:not([href="#"])').click(function () {
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if (target.length) {
-				$('html, body').animate({
-					scrollTop: target.offset().top - 105
-				}, 500);
-				return false;
-			}
-		}
+	// close the menu when clicking anywhere else on the page
+	$('html').click(function () {
+		if ($('.navBoxContainer').hasClass('show')) {
+			$('.burgerWrapper, .navBoxContainer').removeClass('opened show');
+		};
 	});
 
 	// SCROLL REVEAL -- ABOUT, WORK 
@@ -52,7 +47,8 @@ $(window).scroll(function () {
 	}
 });
 
-// smooth scroll on anchor tags
+// Both smooth scrolls together create a really neat bounce effect that I can't get with just one. It happened by accident and I don't want to get rid of it. 
+// smooth scroll
 $('a[href*="#"]:not([href="#"])').click(function () {
 	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 		var target = $(this.hash);
@@ -61,6 +57,20 @@ $('a[href*="#"]:not([href="#"])').click(function () {
 			$('html, body').animate({
 				scrollTop: target.offset().top
 			}, 1000);
+			return false;
+		}
+	}
+});
+
+// other smooth scroll
+$('a[href*="#"]:not([href="#"])').click(function () {
+	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		if (target.length) {
+			$('html, body').animate({
+				scrollTop: target.offset().top - 105
+			}, 500);
 			return false;
 		}
 	}

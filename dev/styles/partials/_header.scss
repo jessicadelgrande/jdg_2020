@@ -27,33 +27,103 @@ header {
 	@include bp(med) {
 		display: flex;
 		flex-direction: column;
+		padding: 10px 0;
 		width: 100%;
 		height: auto;
 	}
 }
 
-.burger {
+.burgerWrapper {
 	display: none;
 
 	@include bp(med) {
 		display: block;
-		margin: 12px auto;
+		margin: 0 auto;
+		position: relative;
 	}
 }
 
-.line1,
-.line2,
-.line3 {
-	display: block;
-	position: relative;
-	width: 50px;
-	height: 6px;
-	margin-bottom: 4px;
-	background-color: $gradientDark;
-	border-radius: 3px;
+
+//mixins
+@mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	right: $right;
+	bottom: $bottom;
 }
 
-// onClick, two lines form an x, third line disappears (css animation?)
+.burger {
+	height: 43px;
+	cursor: pointer;
+	width: 50px;
+	position: relative;
+	transition: all 0.2s linear 0s;
+	
+	.bar {
+		transition: all 0.2s linear 0.2s;
+		width: 100%;
+		height: 8px;
+		background-color: $gradientDark; 
+		border-radius: 20px;
+		
+		&-1 {
+			@include position-absolute($top: 0px, $left: 0);
+		}
+		
+		&-2 {
+			@include position-absolute($top: 17px, $left: 0);
+		}
+		
+		&-3 {
+			@include position-absolute($top: 34px, $left: 0);
+		}
+	}
+	
+	&.opened {
+		transform: rotate(90deg);
+		
+		.bar {
+			
+			&-2 {
+				opacity: 0;
+			}
+			
+			&-1 {
+				transform: rotate(45deg);
+				@include position-absolute($top: 17px, $left: 0);
+			}
+			
+			&-3 {
+				transform: rotate(-45deg);
+				@include position-absolute($top: 17px, $left: 0);
+			}
+		}
+	}
+}
+
+.navBoxContainer {
+	width: 630px;
+	height: 50px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+	background-color: white;
+
+	@include bp(med) {
+		display: flex;
+		flex-direction: column;
+		padding: 10px 0;
+		width: 20%;
+		height: auto;
+		display: none;
+	}
+}
+
+.show {
+	display: block;
+}
 
 .navBox {
 	display: flex;
@@ -87,28 +157,6 @@ header {
 	&:hover,
 	&:active {
 		color: $textDefault;
-	}
-}
-
-.burgerWrapper {
-	// display: none;
-	color: white;
-	font-size: 2.7rem;
-	position: relative;
-	z-index: 10;
-
-	@include bp(med) {
-		display: block;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		bottom: auto;
-		left: 0px;
-		// button {
-		// 	outline: none;
-		// 	font-size: 1.4rem;
-		// 	padding: 10px 15px;
-		// }
 	}
 }
 
