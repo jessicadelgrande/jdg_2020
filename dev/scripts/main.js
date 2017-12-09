@@ -6,9 +6,10 @@ $(document).ready(function () {
 
 		//toggle header nav links
 		e.stopPropagation();
-		$('.navBoxContainer').toggleClass('show');
+		$('.navBoxContainer').toggleClass('show slideFromTop');
 	});
 
+	// animate burger to X shape
 	$('.burger').click(function() {
 	  $(this).toggleClass('opened');
 	});
