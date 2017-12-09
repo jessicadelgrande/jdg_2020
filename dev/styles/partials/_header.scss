@@ -225,17 +225,14 @@ header {
 }
 
 .keepGoingContainer {
-	display: flex;
+	// display: flex;
 	width: 100%;
 	height: 40px;
-	justify-content: center;
-	align-items: center;
-	animation-name: pulse_animation;
-	animation-duration: 7s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+	// justify-content: center;
+	// align-items: center;
 	position: absolute;
-	bottom: 5vh;
+	bottom: 1vh;
+	left: 45vw;
 
 	a {
 		display: flex;
@@ -246,16 +243,14 @@ header {
 .keepGoing {
 	position: absolute;
 	color: white;
-	border-radius: 100%;
-	bottom: 5vh;
+	// border-radius: 100%;
+	bottom: 1vh;
 	margin: auto;
 	z-index: 99;
 	border: none;
 	background-size: 18px;
 	cursor: pointer;
 	outline: none;
-
-
-
+	animation: bounce 3s infinite;
 }
 
