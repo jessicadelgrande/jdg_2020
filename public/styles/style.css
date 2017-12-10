@@ -566,7 +566,7 @@ header {
   border-bottom: 4px solid rgba(251, 210, 215, 0.7); }
   @media (max-width: 650px) {
     .devicons {
-      transform: scale(0.7);
+      transform: scale(0.6);
       margin-top: -60px;
       padding-bottom: 180px; } }
 
@@ -593,6 +593,9 @@ header {
   text-align: center;
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out; }
+  @media (max-width: 500px) {
+    .devicons i {
+      font-size: 64px; } }
   .devicons i:hover {
     opacity: 1; }
 
@@ -629,6 +632,9 @@ footer {
   @media (max-width: 1040px) {
     .contact {
       grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 960px) {
+    .contact {
+      align-items: center; } }
   @media (max-width: 650px) {
     .contact {
       display: flex;
@@ -644,9 +650,7 @@ footer {
       grid-column-start: 1;
       grid-column-end: span 2;
       margin: 0 auto 48px auto;
-      align-items: flex-start; } }
-  @media (max-width: 650px) {
-    .contactLeft {
+      align-items: flex-start;
       text-align: center; } }
 
 .footerHello a {
@@ -741,6 +745,10 @@ footer {
 [id="instafeed"] a {
   height: 90px;
   width: 90px; }
+  @media (max-width: 500px) {
+    [id="instafeed"] a {
+      height: 70px;
+      width: 70px; } }
 
 [id="instafeed"] a img {
   height: 100%;

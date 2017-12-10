@@ -16,7 +16,7 @@
 	border-bottom: 4px solid $gradientLight;
 
 	@include bp(sml) {
-		transform: scale(0.7);
+		transform: scale(0.6);
 		margin-top: -60px;
 		padding-bottom: 180px;
 	}
@@ -52,6 +52,10 @@
 
 	@include bp(med) {
 		// font-size: 64px;
+	}
+
+	@include bp(xsml) {
+		font-size: 64px;
 	}
 
 	&:hover {

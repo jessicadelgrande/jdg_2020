@@ -27,6 +27,10 @@ footer {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+	@include bp(med) {
+		align-items: center;
+	}
+
 	@include bp(sml) {
 		display: flex;
 		flex-direction: column;
@@ -43,10 +47,11 @@ footer {
 		grid-column-start: 1; grid-column-end: span 2;
 		margin: 0 auto 48px auto;
 		align-items: flex-start;
+		text-align: center;
 	}
 
 	@include bp(sml) {
-		text-align: center;
+		// text-align: center;
 	}
 }
 
@@ -167,6 +172,11 @@ footer {
 [id="instafeed"] a {
 	height: 90px;
 	width: 90px;
+
+	@include bp(xsml) {
+		height: 70px;
+		width: 70px;
+	}
 }
 
 [id="instafeed"] a img {
