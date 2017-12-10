@@ -6,7 +6,8 @@ $(document).ready(function () {
 
 		//toggle header nav links
 		e.stopPropagation();
-		$('.navBoxContainer').toggleClass('show slideFromTop');
+		$('.navContainer').toggleClass('show');
+		$('.navBoxContainer').toggleClass('show');
 	});
 
 	// animate burger to X shape

@@ -148,6 +148,7 @@ footer {
 	text-transform: uppercase;
 	font-family: $sansBold;
 	font-size: 14px;
+	letter-spacing: 1px;
 	color: $textDefault;
 	margin-bottom: 8px;
 	text-align: center;
@@ -160,6 +161,7 @@ footer {
 	grid-column-gap: 5px;
 	grid-row-gap: 5px;
 	max-width: 280px;
+	margin: 0 auto;
 }
 
 [id="instafeed"] a {

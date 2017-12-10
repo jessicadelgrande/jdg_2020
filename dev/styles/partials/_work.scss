@@ -125,6 +125,7 @@
 	letter-spacing: 1px;
 	font-size: 14px;
 	color: white;
+	text-align: center;
 
 	@include bp(sml) {
 		font-size: 10px;

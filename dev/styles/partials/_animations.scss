@@ -41,10 +41,10 @@
 	animation: slideFromRight 3s; 
 }
 
-// SLIDE FROM TOP - BURGER MENU
+// SLIDE FROM TOP - not used
 @keyframes slideFromTop {
 	0% {
-		transform: translate3d(0, -400px, 0);
+		transform: translate3d(0, -200px, 0);
 		visibility: visible; 
 	}
 	100% {
@@ -53,5 +53,5 @@
 }
 
 .slideFromTop {
-	animation: slideFromTop 3s; 
+	animation: slideFromTop 0.5s ease-in-out; 
 }

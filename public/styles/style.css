@@ -167,7 +167,8 @@ header {
     .burgerWrapper {
       display: block;
       margin: 0 auto;
-      position: relative; } }
+      position: relative;
+      z-index: 20; } }
 
 .burger {
   height: 43px;
@@ -233,7 +234,7 @@ header {
   justify-content: center;
   align-items: center;
   border-bottom: 4px solid white;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.5s ease-in-out; }
   .navBox:hover {
     border-bottom: 4px solid #666666;
     opacity: 0.8; }
@@ -245,12 +246,13 @@ header {
   font-size: 12px;
   letter-spacing: 2px;
   line-height: 16px;
-  color: #0e1111; }
+  color: #0e1111;
+  transition: all 0.5s ease-in-out; }
 
 .navBox a {
   text-decoration: none;
   color: #0e1111;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.5s ease-in-out; }
   .navBox a:visited, .navBox a:hover, .navBox a:active {
     color: #0e1111; }
 
@@ -470,7 +472,8 @@ header {
   font-family: "basisBold", sans-serif;
   letter-spacing: 1px;
   font-size: 14px;
-  color: white; }
+  color: white;
+  text-align: center; }
   @media (max-width: 650px) {
     .workHoverSkills {
       font-size: 10px; } }
@@ -716,6 +719,7 @@ footer {
   text-transform: uppercase;
   font-family: "basisBold", sans-serif;
   font-size: 14px;
+  letter-spacing: 1px;
   color: #0e1111;
   margin-bottom: 8px;
   text-align: center; }
@@ -726,7 +730,8 @@ footer {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  max-width: 280px; }
+  max-width: 280px;
+  margin: 0 auto; }
 
 [id="instafeed"] a {
   height: 90px;
@@ -775,13 +780,13 @@ footer {
 
 @keyframes slideFromTop {
   0% {
-    transform: translate3d(0, -400px, 0);
+    transform: translate3d(0, -200px, 0);
     visibility: visible; }
   100% {
     transform: translate3d(0, 0, 0); } }
 
 .slideFromTop {
-  animation: slideFromTop 3s; }
+  animation: slideFromTop 0.5s ease-in-out; }
 
 @font-face {
   font-family: tiempos;
