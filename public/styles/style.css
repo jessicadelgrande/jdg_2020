@@ -157,16 +157,18 @@ header {
     .topNav {
       display: flex;
       flex-direction: column;
-      padding: 10px 0;
       width: 100%;
-      height: auto; } }
+      height: 0px; } }
 
 .burgerWrapper {
-  display: none; }
+  display: none;
+  background-color: white;
+  width: 100%;
+  transition: all 0.5s ease-in-out; }
   @media (max-width: 960px) {
     .burgerWrapper {
       display: block;
-      margin: 0 auto;
+      margin: 0 auto 10px auto;
       position: relative;
       z-index: 20; } }
 
@@ -174,11 +176,12 @@ header {
   height: 43px;
   cursor: pointer;
   width: 50px;
+  margin: 12px auto 0 auto;
   position: relative;
   transition: all 0.2s linear 0s; }
   .burger .bar {
     transition: all 0.2s linear 0.2s;
-    width: 100%;
+    width: 50px;
     height: 8px;
     background-color: rgba(228, 161, 153, 0.4);
     border-radius: 20px; }
@@ -216,18 +219,20 @@ header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
-  background-color: white; }
+  background-color: white;
+  transition: all 0.5s ease-in-out; }
   @media (max-width: 960px) {
     .navBoxContainer {
       display: flex;
       flex-direction: column;
       padding: 10px 0;
-      width: 20%;
+      width: calc(100% - 104px);
       height: auto;
       display: none; } }
 
 .show {
-  display: block; }
+  display: block;
+  transition: all 0.5s ease-in-out; }
 
 .navBox {
   display: flex;
@@ -531,8 +536,8 @@ header {
 .anatomyThumb {
   background-image: url("../../assets/anatomy300.jpg"); }
 
-.soundbyteThumb {
-  background-image: url("../../assets/soundbyte300.jpg"); }
+.flowieThumb {
+  background-image: url("../../assets/flowie300.jpg"); }
 
 .definityThumb {
   background-image: url("../../assets/definity300.jpg"); }
@@ -781,9 +786,12 @@ footer {
 @keyframes slideFromTop {
   0% {
     transform: translate3d(0, -200px, 0);
-    visibility: visible; }
+    visibility: visible;
+    display: flex;
+    opacity: 0; }
   100% {
-    transform: translate3d(0, 0, 0); } }
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
 
 .slideFromTop {
   animation: slideFromTop 0.5s ease-in-out; }

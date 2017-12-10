@@ -41,14 +41,17 @@
 	animation: slideFromRight 3s; 
 }
 
-// SLIDE FROM TOP - not used
+// SLIDE FROM TOP
 @keyframes slideFromTop {
 	0% {
 		transform: translate3d(0, -200px, 0);
 		visibility: visible; 
+		display: flex;
+		opacity: 0;
 	}
 	100% {
 		transform: translate3d(0, 0, 0); 
+		opacity: 1;
 	} 
 }
 

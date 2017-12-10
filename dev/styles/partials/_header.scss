@@ -27,18 +27,21 @@ header {
 	@include bp(med) {
 		display: flex;
 		flex-direction: column;
-		padding: 10px 0;
+		// padding: 10px 0;
 		width: 100%;
-		height: auto;
+		height: 0px;
 	}
 }
 
 .burgerWrapper {
 	display: none;
+	background-color: white;
+	width: 100%;
+	transition: all 0.5s ease-in-out;
 
 	@include bp(med) {
 		display: block;
-		margin: 0 auto;
+		margin: 0 auto 10px auto;
 		position: relative;
 		z-index: 20;
 	}
@@ -48,12 +51,13 @@ header {
 	height: 43px;
 	cursor: pointer;
 	width: 50px;
+	margin: 12px auto 0 auto;
 	position: relative;
 	transition: all 0.2s linear 0s;
 	
 	.bar {
 		transition: all 0.2s linear 0.2s;
-		width: 100%;
+		width: 50px;
 		height: 8px;
 		background-color: $gradientDark; 
 		border-radius: 20px;
@@ -101,20 +105,22 @@ header {
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: 1fr;
 	background-color: white;
+	transition: all 0.5s ease-in-out;
 
 	@include bp(med) {
 		display: flex;
 		flex-direction: column;
 		padding: 10px 0;
-		width: 20%;
+		// width: 20%;
+		width: calc(100% - 104px);
 		height: auto;
 		display: none;
-		// transition: all 0.5s ease-in-out;
 	}
 }
 
 .show {
 	display: block;
+	transition: all 0.5s ease-in-out;
 }
 
 .navBox {
