@@ -73,6 +73,11 @@ footer {
 	}
 }
 
+.footerHello .svg-inline--fa {
+	width: 0.5em;
+	color: $gradientDarkHeavy;
+}
+
 .contactMiddle {
 	display: flex;
 	align-items: flex-end;

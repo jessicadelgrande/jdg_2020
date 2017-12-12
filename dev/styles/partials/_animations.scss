@@ -13,7 +13,7 @@
 	animation: enterSlowly 5s forwards;
 }
 
-// BOUNCE ANIMATION
+// BOUNCE ANIMATION - ARROW
 @keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {
 		transform: translateY(0);
@@ -41,7 +41,7 @@
 	animation: slideFromRight 3s; 
 }
 
-// SLIDE FROM TOP
+// SLIDE FROM TOP - MOBILE MENU
 @keyframes slideFromTop {
 	0% {
 		transform: translate3d(0, -200px, 0);
@@ -57,4 +57,24 @@
 
 .slideFromTop {
 	animation: slideFromTop 0.5s ease-in-out; 
+}
+
+// WIGGLE - ENVELOPE ICON IN FOOTER
+@keyframes wiggle {
+	0% {
+		transform: rotate(-15deg);
+		transform-origin: 50%;
+	}
+	50% {
+		transform: rotate(15deg);
+		transform-origin: 50%;
+	}
+	100% {
+		transform: rotate(-15deg);
+		transform-origin: 50%;
+	}
+}
+
+.wiggle {
+	animation: wiggle 2s infinite;
 }

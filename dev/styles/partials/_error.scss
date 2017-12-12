@@ -1,0 +1,59 @@
+// ERROR
+
+.errorWrapper-top {
+	color: black;
+	font-size: 64px;
+	font-family: $serifReg;
+	z-index: 500;
+	margin: 0 auto;
+	width: 600px;
+	display: flex;
+	flex-flow: column wrap;
+	// align-items: flex-end;
+
+}
+
+.errorWrapper {
+	width: 90vw;
+	height: 80vh;
+	margin: 0 auto;
+	background-image: url("../../assets/rose_outside.jpg");
+	background-size: cover;
+	transform: translate(305px, 200px);
+	transform: rotate(15deg);
+}
+
+.errorOverlay {
+	width: 90vw;
+	height: 90vh;
+	margin: 0 auto;
+	background-image: linear-gradient(90deg, $gradientDark, $gradientMid, $gradientLight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	padding: 36px;
+	transform: translate(275px, 350px);
+	transform: rotate(9deg);
+
+	.head {
+		font-family: $serifReg;
+		font-size: 64px;
+		letter-spacing: 1px;
+		color: white;
+		margin: -16px auto 0px auto;
+		text-align: center;
+	}
+
+	.subhead {
+		font-family: $sansBold;
+		font-size: 12px;
+		color: white;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+
