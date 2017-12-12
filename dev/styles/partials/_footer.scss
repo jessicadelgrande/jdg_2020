@@ -71,6 +71,10 @@ footer {
 	&:focus {
 		border-bottom: 4px solid $gradientDarkHeavy;
 	}
+
+	@include bp(xsml) {
+		font-size: 92px;
+	}
 }
 
 .footerHello .svg-inline--fa {

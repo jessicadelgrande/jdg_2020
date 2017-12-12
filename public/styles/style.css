@@ -719,6 +719,9 @@ footer {
     border-bottom: 4px solid rgba(228, 161, 153, 0.8); }
   .footerHello a:focus {
     border-bottom: 4px solid rgba(228, 161, 153, 0.8); }
+  @media (max-width: 500px) {
+    .footerHello a {
+      font-size: 92px; } }
 
 .footerHello .svg-inline--fa {
   width: 0.5em;
