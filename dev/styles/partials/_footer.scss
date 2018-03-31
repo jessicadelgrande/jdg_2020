@@ -11,21 +11,21 @@ footer {
 }
 
 .contact.innerWrapper {
-	width: 80vw;
+	width: 60vw;
 
 	@include bp(xlrg) {
-		width: 80vw;
+		width: 60vw;
 	}
 }
 
 .contact {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 18px;
 
-	@include bp(lrg) {
-		grid-template-columns: repeat(2, 1fr);
-	}
+	// @include bp(lrg) {
+	// 	grid-template-columns: repeat(2, 1fr);
+	// }
 
 	@include bp(med) {
 		align-items: center;
@@ -82,7 +82,7 @@ footer {
 	color: $gradientDarkHeavy;
 }
 
-.contactMiddle {
+.contactRight {
 	display: flex;
 	align-items: flex-end;
 	margin-left: 0 20px 0 32px;
@@ -92,7 +92,7 @@ footer {
 	}
 }
 
-.socialContainerMiddle {
+.socialContainerRight {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -132,20 +132,8 @@ footer {
 	white-space: nowrap;
 	font-family: $sansReg;
 	margin: 0 0 16px 20px;
-	color: $textDefault;
 	padding: 5px 0;
-	border-bottom: 2px solid white;
-	color: $textDefault;
-	text-decoration: none;
-	transition: all 0.2s ease-in-out;
-
-	&:hover {
-		border-bottom: 2px solid $gradientDarkHeavy;
-	}
-
-	&:focus {
-		border-bottom: 2px solid $gradientDarkHeavy;
-	}
+	@include customLink;
 }
 
 .contactRight {
@@ -158,40 +146,40 @@ footer {
 	} 
 }
 
-.gram {
-	text-transform: uppercase;
-	font-family: $sansBold;
-	font-size: 14px;
-	letter-spacing: 1px;
-	color: $textDefault;
-	margin-bottom: 8px;
-	text-align: center;
-}
+// .gram {
+// 	text-transform: uppercase;
+// 	font-family: $sansBold;
+// 	font-size: 14px;
+// 	letter-spacing: 1px;
+// 	color: $textDefault;
+// 	margin-bottom: 8px;
+// 	text-align: center;
+// }
 
-[id="instafeed"] {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-column-gap: 5px;
-	grid-row-gap: 5px;
-	max-width: 280px;
-	margin: 0 auto;
-}
+// [id="instafeed"] {
+// 	display: grid;
+// 	grid-template-columns: repeat(3, 1fr);
+// 	grid-template-rows: repeat(3, 1fr);
+// 	grid-column-gap: 5px;
+// 	grid-row-gap: 5px;
+// 	max-width: 280px;
+// 	margin: 0 auto;
+// }
 
-[id="instafeed"] a {
-	height: 90px;
-	width: 90px;
+// [id="instafeed"] a {
+// 	height: 90px;
+// 	width: 90px;
 
-	@include bp(xsml) {
-		height: 70px;
-		width: 70px;
-	}
-}
+// 	@include bp(xsml) {
+// 		height: 70px;
+// 		width: 70px;
+// 	}
+// }
 
-[id="instafeed"] a img {
-	height: 100%;
-	width: 100%;
-}
+// [id="instafeed"] a img {
+// 	height: 100%;
+// 	width: 100%;
+// }
 
 .copyright {
 	background-color: white;

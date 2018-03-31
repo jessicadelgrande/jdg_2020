@@ -1,6 +1,7 @@
 // WORK
 
 .work.innerWrapper {
+	width: 80vw;
 
 	@include bp(med) {
 		width: 75vw;
@@ -10,7 +11,7 @@
 .workGallery {
 	margin: 60px auto;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
@@ -24,7 +25,7 @@
 
 	@include bp(med) {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 		grid-column-gap: 10px;
 		width: 75vw;
 	}

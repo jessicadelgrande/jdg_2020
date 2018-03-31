@@ -49,6 +49,26 @@
 	}
 }
 
+@mixin customLink {
+	// font-size: 14px;
+	// line-height: 24px;
+	white-space: nowrap;
+	// margin: 0 0 16px 20px;
+	color: $textDefault;
+	// padding: 5px 0;
+	border-bottom: 2px solid white;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		border-bottom: 2px solid $gradientDarkHeavy;
+	}
+
+	&:focus {
+		border-bottom: 2px solid $gradientDarkHeavy;
+	}
+}
+
 @mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
 	position: absolute;
 	top: $top;

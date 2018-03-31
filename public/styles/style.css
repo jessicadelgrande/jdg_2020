@@ -134,6 +134,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 header {
   width: 100vw;
+  height: 100vh;
   position: relative; }
 
 .navContainer {
@@ -285,18 +286,18 @@ header {
 
 .nameContainerRight p {
   transform: rotate(90deg);
-  right: -140px; }
+  right: -105px; }
 
 .hero {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+  margin: 10vh auto;
   background-image: url("../../assets/rose_outside.jpg");
   background-size: cover; }
 
 .heroOverlay {
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: 80vh;
   margin: 0 auto;
   background-image: linear-gradient(90deg, rgba(228, 161, 153, 0.4), rgba(236, 183, 191, 0.3), rgba(251, 210, 215, 0.7));
   display: flex;
@@ -337,8 +338,13 @@ header {
   outline: none;
   animation: bounce 3s infinite; }
 
+.innerWrapper {
+  width: 80vw; }
+
 .about {
-  margin: 80px auto;
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
   visibility: visible;
   -webkit-transform: translateY(0) scale(1);
   opacity: 1;
@@ -347,40 +353,73 @@ header {
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
   transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; }
 
-.about p {
-  margin: 40px auto 0 auto;
-  width: 66%;
+.aboutHead {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 18px;
+  margin-bottom: 48px; }
+
+.aboutImage {
+  background-image: url("../../assets/stahl.png");
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.aboutTitle {
+  grid-column: 2 / span 2;
   text-align: center;
   font-family: "tiempos", serif;
-  text-decoration: underline;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 46px;
   color: #0e1111; }
+  .aboutTitle .aboutLink {
+    white-space: nowrap;
+    color: #0e1111;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out; }
+    .aboutTitle .aboutLink:hover {
+      border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+    .aboutTitle .aboutLink:focus {
+      border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+
+.aboutBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 18px;
+  width: 70vw;
+  margin: 0 auto; }
+
+.aboutText {
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-family: "basisReg", sans-serif;
+  font-size: 14px;
+  line-height: 1.6em; }
+
+.aboutArt {
+  grid-column: 3 / span 1;
+  text-align: center; }
 
 .noods svg {
-  height: 40px;
+  height: 100px;
   margin-bottom: -10px;
   padding: 0 4px; }
 
-.aboutColumns {
-  width: 80%;
-  margin: 0 auto;
-  column-count: 2;
-  vertical-align: text-top;
-  font-family: "basisReg", sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px; }
-  .aboutColumns p {
-    margin: 0; }
+.films svg {
+  height: 100px;
+  margin-bottom: -10px;
+  padding: 0 4px; }
 
-@media (max-width: 960px) {
-  .work.innerWrapper {
-    width: 75vw; } }
+.work.innerWrapper {
+  width: 80vw; }
+  @media (max-width: 960px) {
+    .work.innerWrapper {
+      width: 75vw; } }
 
 .workGallery {
   margin: 60px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -394,7 +433,7 @@ header {
   @media (max-width: 960px) {
     .workGallery {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       grid-column-gap: 10px;
       width: 75vw; } }
   @media (max-width: 500px) {
@@ -674,18 +713,15 @@ footer {
       margin-top: -100px; } }
 
 .contact.innerWrapper {
-  width: 80vw; }
+  width: 60vw; }
   @media (max-width: 1060px) {
     .contact.innerWrapper {
-      width: 80vw; } }
+      width: 60vw; } }
 
 .contact {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 18px; }
-  @media (max-width: 1040px) {
-    .contact {
-      grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 960px) {
     .contact {
       align-items: center; } }
@@ -727,15 +763,15 @@ footer {
   width: 0.5em;
   color: rgba(228, 161, 153, 0.8); }
 
-.contactMiddle {
+.contactRight {
   display: flex;
   align-items: flex-end;
   margin-left: 0 20px 0 32px; }
   @media (max-width: 650px) {
-    .contactMiddle {
+    .contactRight {
       margin: 48px auto; } }
 
-.socialContainerMiddle {
+.socialContainerRight {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -766,10 +802,10 @@ footer {
   white-space: nowrap;
   font-family: "basisReg", sans-serif;
   margin: 0 0 16px 20px;
-  color: #0e1111;
   padding: 5px 0;
-  border-bottom: 2px solid white;
+  white-space: nowrap;
   color: #0e1111;
+  border-bottom: 2px solid white;
   text-decoration: none;
   transition: all 0.2s ease-in-out; }
   .socialLabel:hover {
@@ -784,36 +820,6 @@ footer {
   @media (max-width: 650px) {
     .contactRight {
       margin: 24px auto; } }
-
-.gram {
-  text-transform: uppercase;
-  font-family: "basisBold", sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: #0e1111;
-  margin-bottom: 8px;
-  text-align: center; }
-
-[id="instafeed"] {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  max-width: 280px;
-  margin: 0 auto; }
-
-[id="instafeed"] a {
-  height: 90px;
-  width: 90px; }
-  @media (max-width: 500px) {
-    [id="instafeed"] a {
-      height: 70px;
-      width: 70px; } }
-
-[id="instafeed"] a img {
-  height: 100%;
-  width: 100%; }
 
 .copyright {
   background-color: white;

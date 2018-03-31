@@ -2,6 +2,7 @@
 
 header {
 	width: 100vw;
+	height: 100vh;
 	position: relative;
 }
 
@@ -191,21 +192,21 @@ header {
 
 	p {
 		transform: rotate(90deg);
-		right: -140px;
+		right: -105px;
 	}
 }
 
 .hero {
-	width: 100vw;
-	height: 100vh;
-	margin: 0 auto;
+	width: 80vw;
+	height: 80vh;
+	margin: 10vh auto;
 	background-image: url("../../assets/rose_outside.jpg");
 	background-size: cover;
 }
 
 .heroOverlay {
-	width: 100vw;
-	height: 100vh;
+	width: 80vw;
+	height: 80vh;
 	margin: 0 auto;
 	background-image: linear-gradient(90deg, $gradientDark, $gradientMid, $gradientLight);
 	display: flex;
