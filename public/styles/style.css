@@ -151,7 +151,7 @@ header {
   height: 50px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   background-color: white; }
   @media (max-width: 960px) {
@@ -218,7 +218,7 @@ header {
   height: 50px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   background-color: white;
   transition: all 0.5s ease-in-out; }
@@ -354,23 +354,40 @@ header {
   transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; }
 
 .aboutHead {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 18px;
   margin-bottom: 48px; }
 
-.aboutImage {
-  background-image: url("../../assets/stahl.png");
-  background-repeat: no-repeat;
-  background-size: contain; }
+.astrology {
+  display: inline-block; }
+  .astrology svg {
+    height: 80px;
+    margin-bottom: -34px;
+    padding: 0 4px;
+    fill: rgba(228, 161, 153, 0.8); }
+
+.films {
+  display: inline-block; }
+  .films svg {
+    height: 80px;
+    margin-bottom: -34px;
+    padding: 0 4px;
+    fill: rgba(228, 161, 153, 0.8); }
+
+.noods {
+  display: inline-block; }
+  .noods svg {
+    height: 80px;
+    margin-bottom: -34px;
+    padding: 0 4px;
+    fill: rgba(228, 161, 153, 0.8); }
 
 .aboutTitle {
-  grid-column: 2 / span 2;
   text-align: center;
   font-family: "tiempos", serif;
   font-size: 28px;
   line-height: 46px;
-  color: #0e1111; }
+  color: #0e1111;
+  width: 70vw;
+  margin: 0 auto; }
   .aboutTitle .aboutLink {
     white-space: nowrap;
     color: #0e1111;
@@ -396,19 +413,13 @@ header {
   font-size: 14px;
   line-height: 1.6em; }
 
-.aboutArt {
+.aboutImage {
   grid-column: 3 / span 1;
-  text-align: center; }
-
-.noods svg {
-  height: 100px;
-  margin-bottom: -10px;
-  padding: 0 4px; }
-
-.films svg {
-  height: 100px;
-  margin-bottom: -10px;
-  padding: 0 4px; }
+  background-image: url("../../assets/stahl.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 250px;
+  min-height: 250px; }
 
 .work.innerWrapper {
   width: 80vw; }
@@ -763,14 +774,6 @@ footer {
   width: 0.5em;
   color: rgba(228, 161, 153, 0.8); }
 
-.contactRight {
-  display: flex;
-  align-items: flex-end;
-  margin-left: 0 20px 0 32px; }
-  @media (max-width: 650px) {
-    .contactRight {
-      margin: 48px auto; } }
-
 .socialContainerRight {
   display: flex;
   flex-direction: column;
@@ -817,6 +820,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media (max-width: 1040px) {
+    .contactRight {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      margin: 0 auto 48px auto;
+      align-items: flex-start;
+      text-align: center; } }
   @media (max-width: 650px) {
     .contactRight {
       margin: 24px auto; } }

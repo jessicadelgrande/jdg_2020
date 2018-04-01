@@ -82,15 +82,15 @@ footer {
 	color: $gradientDarkHeavy;
 }
 
-.contactRight {
-	display: flex;
-	align-items: flex-end;
-	margin-left: 0 20px 0 32px;
+// .contactRight {
+// 	display: flex;
+// 	align-items: flex-end;
+// 	margin-left: 0 20px 0 32px;
 
-	@include bp(sml) {
-		margin: 48px auto;
-	}
-}
+// 	@include bp(sml) {
+// 		margin: 48px auto;
+// 	}
+// }
 
 .socialContainerRight {
 	display: flex;
@@ -140,6 +140,13 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	@include bp(lrg) {
+		grid-column-start: 1; grid-column-end: span 2;
+		margin: 0 auto 48px auto;
+		align-items: flex-start;
+		text-align: center;
+	}
 
 	@include bp(sml) {
 		margin: 24px auto;
