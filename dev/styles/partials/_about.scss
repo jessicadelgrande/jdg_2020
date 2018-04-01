@@ -65,6 +65,10 @@
 	.aboutLink {
 		@include customLink;
 	}
+
+	p {
+		margin: 0 auto;
+	}
 }
 
 .aboutBody {

@@ -397,6 +397,8 @@ header {
       border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
     .aboutTitle .aboutLink:focus {
       border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+  .aboutTitle p {
+    margin: 0 auto; }
 
 .aboutBody {
   display: flex;
