@@ -405,8 +405,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   width: 70vw;
-  margin: 0 auto; }
-  @media (max-width: 650px) {
+  margin: 84px auto; }
+  @media (max-width: 960px) {
     .aboutBody {
       flex-direction: column; } }
 
@@ -431,14 +431,14 @@ header {
       border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
   @media (max-width: 960px) {
     .aboutText {
-      margin: 0 auto; } }
+      margin: 0 auto 64px auto; } }
 
 .aboutImage {
   background-image: url("../../assets/stahl.png");
   background-repeat: no-repeat;
   background-size: contain;
-  min-width: 250px;
-  min-height: 250px;
+  min-width: 300px;
+  min-height: 300px;
   margin-left: 48px; }
   @media (max-width: 960px) {
     .aboutImage {
