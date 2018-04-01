@@ -343,8 +343,7 @@ header {
 
 .about {
   width: 80vw;
-  height: 100vh;
-  margin: 0 auto;
+  margin: 0 auto 88px auto;
   visibility: visible;
   -webkit-transform: translateY(0) scale(1);
   opacity: 1;
@@ -359,24 +358,24 @@ header {
 .astrology {
   display: inline-block; }
   .astrology svg {
-    height: 80px;
-    margin-bottom: -34px;
+    height: 60px;
+    margin-bottom: -24px;
     padding: 0 4px;
     fill: rgba(228, 161, 153, 0.8); }
 
 .films {
   display: inline-block; }
   .films svg {
-    height: 80px;
-    margin-bottom: -34px;
+    height: 60px;
+    margin-bottom: -24px;
     padding: 0 4px;
     fill: rgba(228, 161, 153, 0.8); }
 
 .noods {
   display: inline-block; }
   .noods svg {
-    height: 80px;
-    margin-bottom: -34px;
+    height: 60px;
+    margin-bottom: -24px;
     padding: 0 4px;
     fill: rgba(228, 161, 153, 0.8); }
 
@@ -400,26 +399,48 @@ header {
       border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
 
 .aboutBody {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 70vw;
   margin: 0 auto; }
+  @media (max-width: 650px) {
+    .aboutBody {
+      flex-direction: column; } }
 
 .aboutText {
-  grid-column: 1 / span 2;
+  width: 66%;
   text-align: center;
   font-family: "basisReg", sans-serif;
   font-size: 14px;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+  letter-spacing: 0.6px; }
+  .aboutText p:first-of-type {
+    margin-top: 0px; }
+  .aboutText .aboutLink {
+    white-space: nowrap;
+    color: #0e1111;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out; }
+    .aboutText .aboutLink:hover {
+      border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+    .aboutText .aboutLink:focus {
+      border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+  @media (max-width: 960px) {
+    .aboutText {
+      margin: 0 auto; } }
 
 .aboutImage {
-  grid-column: 3 / span 1;
   background-image: url("../../assets/stahl.png");
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 250px;
-  min-height: 250px; }
+  min-height: 250px;
+  margin-left: 48px; }
+  @media (max-width: 960px) {
+    .aboutImage {
+      margin: 0 auto; } }
 
 .work.innerWrapper {
   width: 80vw; }
@@ -429,10 +450,11 @@ header {
 
 .workGallery {
   margin: 60px auto;
+  width: 60vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
   grid-row-gap: 20px;
   visibility: visible;
   -webkit-transform: translateY(0) scale(1);
@@ -443,8 +465,6 @@ header {
   transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; }
   @media (max-width: 960px) {
     .workGallery {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
       grid-column-gap: 10px;
       width: 75vw; } }
   @media (max-width: 500px) {
@@ -802,6 +822,7 @@ footer {
 .socialLabel {
   font-size: 14px;
   line-height: 24px;
+  letter-spacing: 0.6px;
   white-space: nowrap;
   font-family: "basisReg", sans-serif;
   margin: 0 0 16px 20px;

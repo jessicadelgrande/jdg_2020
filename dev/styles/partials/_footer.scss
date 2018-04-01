@@ -23,10 +23,6 @@ footer {
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 18px;
 
-	// @include bp(lrg) {
-	// 	grid-template-columns: repeat(2, 1fr);
-	// }
-
 	@include bp(med) {
 		align-items: center;
 	}
@@ -82,16 +78,6 @@ footer {
 	color: $gradientDarkHeavy;
 }
 
-// .contactRight {
-// 	display: flex;
-// 	align-items: flex-end;
-// 	margin-left: 0 20px 0 32px;
-
-// 	@include bp(sml) {
-// 		margin: 48px auto;
-// 	}
-// }
-
 .socialContainerRight {
 	display: flex;
 	flex-direction: column;
@@ -129,6 +115,7 @@ footer {
 .socialLabel {
 	font-size: 14px;
 	line-height: 24px;
+	letter-spacing: 0.6px;
 	white-space: nowrap;
 	font-family: $sansReg;
 	margin: 0 0 16px 20px;

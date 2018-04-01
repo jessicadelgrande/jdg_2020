@@ -6,8 +6,7 @@
 
 .about {
 	width: 80vw;
-	height: 100vh;
-	margin: 0 auto;
+	margin: 0 auto 88px auto;
 	visibility: visible;
 	-webkit-transform: translateY(0) scale(1);
 	opacity: 1;
@@ -18,10 +17,6 @@
 }
 
 .aboutHead {
-	// display: grid;
-	// grid-template-columns: repeat(3, 1fr);
-	// grid-template-rows: repeat(3, 1fr);
-	// grid-column-gap: 18px;
 	margin-bottom: 48px;
 }
 
@@ -29,8 +24,8 @@
 	display: inline-block;
 
 	svg {
-		height: 80px;
-		margin-bottom: -34px;
+		height: 60px;
+		margin-bottom: -24px;
 		padding: 0 4px;
 		fill: $gradientDarkHeavy;
 	}
@@ -40,8 +35,8 @@
 	display: inline-block;
 
 	svg {
-		height: 80px;
-		margin-bottom: -34px;
+		height: 60px;
+		margin-bottom: -24px;
 		padding: 0 4px;
 		fill: $gradientDarkHeavy;
 	}
@@ -51,8 +46,8 @@
 	display: inline-block;
 
 	svg {
-		height: 80px;
-		margin-bottom: -34px;
+		height: 60px;
+		margin-bottom: -24px;
 		padding: 0 4px;
 		fill: $gradientDarkHeavy;
 	}
@@ -73,40 +68,57 @@
 }
 
 .aboutBody {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 18px;
+	// display: grid;
+	// grid-template-columns: repeat(5, 1fr);
+	// grid-column-gap: 18px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	width: 70vw;
 	margin: 0 auto;
+
+	@include bp(sml) {
+		// grid-template-columns: repeat(1, 1fr);
+		flex-direction: column;
+	}
 }
 
 .aboutText {
-	grid-column: 1 / span 2;
+	// grid-column: 1 / span 3;
+	width: 66%;
 	text-align: center;
 	font-family: $sansReg;
 	font-size: 14px;
 	line-height: 1.6em;
+	letter-spacing: 0.6px;
+
+	p:first-of-type {
+		margin-top: 0px;
+	}
+
+	.aboutLink {
+		@include customLink;
+	}
+
+	@include bp(med) {
+		// grid-column: 1 / span 3;
+		// grid-row: 1 / span 1;
+		margin: 0 auto;
+	}
 }
 
 .aboutImage {
-	grid-column: 3 / span 1;
+	// grid-column: 5 / span 1;
 	background-image: url("../../assets/stahl.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	min-width: 250px;
 	min-height: 250px;
+	margin-left: 48px;
+
+	@include bp(med) {
+		// grid-column: 1 / span 3;
+		// grid-row: 2 / span 1;
+		margin: 0 auto;
+	}
 }
-
-// .aboutColumns {
-// 	width: 80%;
-// 	margin: 0 auto;
-// 	column-count: 2;
-// 	vertical-align: text-top;
-// 	font-family: $sansReg;
-// 	font-size: 14px;
-// 	letter-spacing: 1px;
-
-// 	p {
-// 		margin: 0;
-// 	}
-// }

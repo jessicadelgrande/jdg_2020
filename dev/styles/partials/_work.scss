@@ -10,10 +10,11 @@
 
 .workGallery {
 	margin: 60px auto;
+	width: 60vw;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	grid-column-gap: 20px;
+	grid-column-gap: 10px;
 	grid-row-gap: 20px;
 	visibility: visible;
 	-webkit-transform: translateY(0) scale(1);
@@ -24,8 +25,8 @@
 	transition: transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 
 	@include bp(med) {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		// grid-template-columns: repeat(2, 1fr);
+		// grid-template-rows: repeat(2, 1fr);
 		grid-column-gap: 10px;
 		width: 75vw;
 	}
