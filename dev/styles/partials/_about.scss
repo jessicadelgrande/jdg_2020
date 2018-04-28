@@ -114,6 +114,8 @@
 
 	@include bp(med) {
 		margin: 0 auto;
+		min-width: 280px;
+		min-height: 280px;
 		// margin-left: 48px;
 	}
 }
