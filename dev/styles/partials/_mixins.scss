@@ -65,11 +65,12 @@
 	border-bottom: 2px solid $gradientDarkHeavy;
 
 	&:hover {
-		color: $gradientDarkHeavy;
+		border-bottom: 2px solid $textDefault;
+
 	}
 
 	&:focus {
-		color: $gradientDarkHeavy;
+		border-bottom: 2px solid $textDefault;
 	}
 }
 

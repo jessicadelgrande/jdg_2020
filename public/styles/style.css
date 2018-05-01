@@ -399,9 +399,9 @@ header {
     transition: all 0.2s ease-in-out;
     border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
     .aboutTitle .aboutLink:hover {
-      color: rgba(228, 161, 153, 0.8); }
+      border-bottom: 2px solid #0e1111; }
     .aboutTitle .aboutLink:focus {
-      color: rgba(228, 161, 153, 0.8); }
+      border-bottom: 2px solid #0e1111; }
   .aboutTitle p {
     margin: 0 auto; }
 
@@ -431,9 +431,9 @@ header {
     transition: all 0.2s ease-in-out;
     border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
     .aboutText .aboutLink:hover {
-      color: rgba(228, 161, 153, 0.8); }
+      border-bottom: 2px solid #0e1111; }
     .aboutText .aboutLink:focus {
-      color: rgba(228, 161, 153, 0.8); }
+      border-bottom: 2px solid #0e1111; }
   @media (max-width: 960px) {
     .aboutText {
       margin: 0 auto 64px auto; } }
@@ -846,9 +846,9 @@ footer {
   transition: all 0.2s ease-in-out;
   border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
   .socialLabel:hover {
-    color: rgba(228, 161, 153, 0.8); }
+    border-bottom: 2px solid #0e1111; }
   .socialLabel:focus {
-    color: rgba(228, 161, 153, 0.8); }
+    border-bottom: 2px solid #0e1111; }
 
 .contactRight {
   display: flex;
