@@ -355,28 +355,33 @@ header {
 .aboutHead {
   margin-bottom: 48px; }
 
+.aboutIcons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px; }
+
 .astrology {
   display: inline-block; }
   .astrology svg {
-    height: 60px;
+    height: 100px;
     margin-bottom: -24px;
-    padding: 0 4px;
+    padding: 0 16px;
     fill: rgba(228, 161, 153, 0.8); }
 
 .films {
   display: inline-block; }
   .films svg {
-    height: 60px;
+    height: 100px;
     margin-bottom: -24px;
-    padding: 0 4px;
+    padding: 0 16px;
     fill: rgba(228, 161, 153, 0.8); }
 
 .noods {
   display: inline-block; }
   .noods svg {
-    height: 60px;
+    height: 100px;
     margin-bottom: -24px;
-    padding: 0 4px;
+    padding: 0 16px;
     fill: rgba(228, 161, 153, 0.8); }
 
 .aboutTitle {
@@ -390,13 +395,13 @@ header {
   .aboutTitle .aboutLink {
     white-space: nowrap;
     color: #0e1111;
-    border-bottom: 2px solid white;
     text-decoration: none;
-    transition: all 0.2s ease-in-out; }
+    transition: all 0.2s ease-in-out;
+    border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
     .aboutTitle .aboutLink:hover {
-      border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+      color: rgba(228, 161, 153, 0.8); }
     .aboutTitle .aboutLink:focus {
-      border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+      color: rgba(228, 161, 153, 0.8); }
   .aboutTitle p {
     margin: 0 auto; }
 
@@ -422,13 +427,13 @@ header {
   .aboutText .aboutLink {
     white-space: nowrap;
     color: #0e1111;
-    border-bottom: 2px solid white;
     text-decoration: none;
-    transition: all 0.2s ease-in-out; }
+    transition: all 0.2s ease-in-out;
+    border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
     .aboutText .aboutLink:hover {
-      border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+      color: rgba(228, 161, 153, 0.8); }
     .aboutText .aboutLink:focus {
-      border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+      color: rgba(228, 161, 153, 0.8); }
   @media (max-width: 960px) {
     .aboutText {
       margin: 0 auto 64px auto; } }
@@ -837,13 +842,13 @@ footer {
   padding: 5px 0;
   white-space: nowrap;
   color: #0e1111;
-  border-bottom: 2px solid white;
   text-decoration: none;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
   .socialLabel:hover {
-    border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+    color: rgba(228, 161, 153, 0.8); }
   .socialLabel:focus {
-    border-bottom: 2px solid rgba(228, 161, 153, 0.8); }
+    color: rgba(228, 161, 153, 0.8); }
 
 .contactRight {
   display: flex;

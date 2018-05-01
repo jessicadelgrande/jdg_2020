@@ -49,19 +49,27 @@
 	}
 }
 
+@mixin aboutIcons {
+	height: 100px;
+	margin-bottom: -24px;
+	padding: 0 16px;
+	fill: $gradientDarkHeavy;
+}
+
 @mixin customLink {
 	white-space: nowrap;
 	color: $textDefault;
-	border-bottom: 2px solid white;
+	// border-bottom: 2px solid white;
 	text-decoration: none;
 	transition: all 0.2s ease-in-out;
+	border-bottom: 2px solid $gradientDarkHeavy;
 
 	&:hover {
-		border-bottom: 2px solid $gradientDarkHeavy;
+		color: $gradientDarkHeavy;
 	}
 
 	&:focus {
-		border-bottom: 2px solid $gradientDarkHeavy;
+		color: $gradientDarkHeavy;
 	}
 }
 
