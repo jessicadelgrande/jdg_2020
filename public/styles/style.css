@@ -631,10 +631,9 @@ header {
 .whereThumb {
   background-image: url("../../assets/whereshouldibuy300.jpg"); }
 
-/* Needed for a fluid height: */
-/* main wrapper */
-/* Without JS, we use :target */
-/* Media queries */
+.readingThumb {
+  background-image: url("../../assets/whatiseveryonereading300.jpg"); }
+
 .skills {
   display: flex;
   justify-content: center;
